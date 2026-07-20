@@ -8,104 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <title>INTRO - AYUSH AGRAWAL</title>
-    <STYLE>
-        body {
+    <link rel="stylesheet" href="style.css">
 
-            background-color: rgb(253, 255, 253);
-            font-family: 'system-ui', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, 'Ubuntu', Cantarell, 'Open Sans', Helvetica Neue, sans-serif;
-            ;
-            color: teal;
-        }
-
-        .hero {
-            display: flex;
-            flex-direction: column;
-            align-items: centEr;
-            width: 450px;
-            box-shadow: 7px 9px teal;
-            border-color: teal;
-            border-style: solid;
-            border-width: 5px;
-            color: rgb(12, 129, 111);
-            justify-content: center;
-
-        }
-
-        .heroblock {
-            display: flex;
-
-            justify-content: cenTEr;
-
-        }
-
-        .h {
-            margin: 0px;
-
-
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            position: sticky;
-            border-bottom: 5px solid teal;
-
-        }
-
-        .nav {
-            display: flex;
-            gap: 10px
-        }
-
-        .ayu {
-            display: flex;
-            align-content: center;
-            font-size: 60px;
-        }
-
-        .ayuwave {
-            display: flex;
-
-        }
-
-        .insta {
-
-            height: 30px;
-            border-radius: 8px;
-            display: flex;
-            justify-items: center;
-        }
-
-        .git {
-
-            height: 30px;
-            border-radius: 20px;
-            display: flex;
-            justify-items: center;
-        }
-
-        .myintro {
-            display: flex;
-            justify-content: center;
-        }
-
-        #myintro {
-            width: 800px
-        }
-
-        .aboutme {
-            margin: 80px;
-        }
-        .skills{
-            margin: 80px;
-        }
-    </STYLE>
 </head>
 
 <body>
     <header>
 
-        <h1 class="navbar" style="color:teal;">
+        <h1 class="navbar">
             <div class="ayuwave">
                 <span class="ayu">Hi, I'm Ayush</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="100px" height="120px" viewBox="0 10 50 50">
@@ -172,22 +82,67 @@
                 <h1><SPAN><b>SKILLS</b></SPAN></h1>
 
                 <div class="myskills">
-                    <p id="frontend">
+
                     <h2>FRONTEND</h2>
-                    <ul>
-                        <li id="html">HTML5</li>
-                        <LI id="css">CSS3</LI>
-                        <li id="res">RESPONSIVE DESIGN</li>
+                    <ul id="frontend">
+                        <li id="html"><p class="htmltext">HTML</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="150" height="150"
+                                viewBox="0 -0 44 44">
+                                <path fill="#E65100" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path>
+                                <path fill="#FF6D00" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path>
+                                <path fill="#FFF"
+                                    d="M24,25v-4h8.6l-0.7,11.5L24,35.1v-4.2l4.1-1.4l0.3-4.5H24z M32.9,17l0.3-4H24v4H32.9z">
+                                </path>
+                                <path fill="#EEE"
+                                    d="M24,30.9v4.2l-7.9-2.6L15.7,27h4l0.2,2.5L24,30.9z M19.1,17H24v-4h-9.1l0.7,12H24v-4h-4.6L19.1,17z">
+                                </path>
+                               
+                                </svg>
+                        </li>
+                        <LI id="css">
+                            <p class="csstext">CSS</p><svg xmlns="http://www.w3.org/2000/svg" x="100px" y="0px"
+                                width="150" height="150" viewBox="0 -0 44 44">
+                                <path fill="#0277BD" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path>
+                                <path fill="#039BE5" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path>
+                                <path fill="#FFF"
+                                    d="M33.1 13L24 13 24 17 28.9 17 28.6 21 24 21 24 25 28.4 25 28.1 29.5 24 30.9 24 35.1 31.9 32.5 32.6 21 32.6 21z">
+                                </path>
+                                <path fill="#EEE"
+                                    d="M24,13v4h-8.9l-0.3-4H24z M19.4,21l0.2,4H24v-4H19.4z M19.8,27h-4l0.3,5.5l7.9,2.6v-4.2l-4.1-1.4L19.8,27z">
+                                </path>
+                            </svg>
+                        </LI>
+                        <li style="color: black;" id="res"><b>RESPONSIVE DESIGN</b><img
+                                src="svg/computer-responsive-svgrepo-com.svg"></li>
                     </ul>
-                    </p>
-                    <p id="tools">
+
+
                     <h2>TOOLS</h2>
-                    <UL>
-                        <li id="git">GIT</li>
-                        <LI id="github">GITHUB</LI>
-                        <LI id="vs">VS CODE</LI>
+                    <UL id="tools">
+                        <li id="git"><img width="220px" id=svgit" src="svg/git-svgrepo-com.svg"></li>
+                        <LI id="github"><svg xmlns="http://www.w3.org/2000/svg" width="140" height="140"
+                                viewBox="0 0 24 24" fill="black">
+                                <path
+                                    d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.85 10.9.57.1.78-.25.78-.55v-2.15c-3.19.69-3.86-1.54-3.86-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.69.08-.69 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.25 3.34.96.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.47.11-3.06 0 0 .97-.31 3.17 1.17a10.96 10.96 0 0 1 5.78 0c2.2-1.48 3.17-1.17 3.17-1.17.62 1.59.23 2.77.11 3.06.73.8 1.18 1.82 1.18 3.07 0 4.41-2.69 5.38-5.25 5.67.41.35.78 1.03.78 2.08v3.08c0 .3.21.66.79.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" />
+                            </svg>
+                            <p class="githubtext">GITHUB</p>
+                        </LI>
+                        <LI id="vs"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="140" height="135"
+                                viewBox="0 0 48 48">
+                                <path fill="#29b6f6"
+                                    d="M44,11.11v25.78c0,1.27-0.79,2.4-1.98,2.82l-8.82,4.14L34,33V15L33.2,4.15l8.82,4.14 C43.21,8.71,44,9.84,44,11.11z">
+                                </path>
+                                <path fill="#0277bd"
+                                    d="M9,33.896L34,15V5.353c0-1.198-1.482-1.758-2.275-0.86L4.658,29.239 c-0.9,0.83-0.849,2.267,0.107,3.032c0,0,1.324,1.232,1.803,1.574C7.304,34.37,8.271,34.43,9,33.896z">
+                                </path>
+                                <path fill="#0288d1"
+                                    d="M9,14.104L34,33v9.647c0,1.198-1.482,1.758-2.275,0.86L4.658,18.761 c-0.9-0.83-0.849-2.267,0.107-3.032c0,0,1.324-1.232,1.803-1.574C7.304,13.63,8.271,13.57,9,14.104z">
+                                </path>
+                            </svg>
+                            <p CLASS="vscode">VS CODE</p>
+                        </LI>
                     </UL>
-                    </p>
+
 
                 </div>
             </b>
