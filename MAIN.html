@@ -11,29 +11,30 @@
     <STYLE>
         body {
 
-            background-color: rgb(46, 47, 46);
+            background-color: rgb(253, 255, 253);
             font-family: 'system-ui', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, 'Ubuntu', Cantarell, 'Open Sans', Helvetica Neue, sans-serif;
             ;
+            color: teal;
         }
 
         .hero {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: centEr;
             width: 450px;
             box-shadow: 7px 9px teal;
             border-color: teal;
             border-style: solid;
             border-width: 5px;
             color: rgb(12, 129, 111);
-
+            justify-content: center;
 
         }
 
-        h2 {
+        .heroblock {
             display: flex;
 
-            justify-content: center;
+            justify-content: cenTEr;
 
         }
 
@@ -47,6 +48,7 @@
             display: flex;
             justify-content: space-between;
             position: sticky;
+            border-bottom: 5px solid teal;
 
         }
 
@@ -60,11 +62,43 @@
             align-content: center;
             font-size: 60px;
         }
-        .ayuwave{display:flex;
+
+        .ayuwave {
+            display: flex;
 
         }
 
-        
+        .insta {
+
+            height: 30px;
+            border-radius: 8px;
+            display: flex;
+            justify-items: center;
+        }
+
+        .git {
+
+            height: 30px;
+            border-radius: 20px;
+            display: flex;
+            justify-items: center;
+        }
+
+        .myintro {
+            display: flex;
+            justify-content: center;
+        }
+
+        #myintro {
+            width: 800px
+        }
+
+        .aboutme {
+            margin: 80px;
+        }
+        .skills{
+            margin: 80px;
+        }
     </STYLE>
 </head>
 
@@ -88,13 +122,13 @@
                 </svg>
             </div>
             <div class="nav"><a href=""></a>
-                <a type="_blank" href="https://www.instagram.com/ayush__15_12/">
+                <a class="insta" type="_blank" href="https://www.instagram.com/ayush__15_12/">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" fill="teal">
                         <path
                             d="M7.75 2C4.57 2 2 4.57 2 7.75v8.5C2 19.43 4.57 22 7.75 22h8.5C19.43 22 22 19.43 22 16.25v-8.5C22 4.57 19.43 2 16.25 2h-8.5zm0 2h8.5A3.75 3.75 0 0 1 20 7.75v8.5A3.75 3.75 0 0 1 16.25 20h-8.5A3.75 3.75 0 0 1 4 16.25v-8.5A3.75 3.75 0 0 1 7.75 4zm8.75 1.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z" />
                     </svg>
                 </a>
-                <a type="_blank" href="https://github.com/ayushagrawalfzd4321-dot"><svg
+                <a class="git" type="_blank" href="https://github.com/ayushagrawalfzd4321-dot"><svg
                         xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="teal">
                         <path
                             d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.85 10.9.57.1.78-.25.78-.55v-2.15c-3.19.69-3.86-1.54-3.86-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.69.08-.69 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.25 3.34.96.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.47.11-3.06 0 0 .97-.31 3.17 1.17a10.96 10.96 0 0 1 5.78 0c2.2-1.48 3.17-1.17 3.17-1.17.62 1.59.23 2.77.11 3.06.73.8 1.18 1.82 1.18 3.07 0 4.41-2.69 5.38-5.25 5.67.41.35.78 1.03.78 2.08v3.08c0 .3.21.66.79.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" />
@@ -102,7 +136,7 @@
             </div>
 
         </h1>
-        <h2>
+        <h2 class="heroblock">
             <div class="hero">
                 <p class="h">Aspiring computer science student</p>
                 <p class="h">Currently learning</p>
@@ -110,6 +144,55 @@
             </div>
         </h2>
     </header>
+    <main>
+        <section class="aboutme">
+            <h1><SPAN><b>ABOUT ME</b></SPAN></h1>
+            <div class="myintro">
+                <P id="myintro"><b>Hi, I'm Ayush, an aspiring Software Engineer and first-year Computer Science student
+                        with a passion for creating modern, user-friendly web applications.
+
+                        I enjoy turning ideas into interactive websites and continuously improving my skills through
+                        hands-on projects. Currently, I'm strengthening my foundation in HTML, CSS, JavaScript, Git, and
+                        GitHub, while preparing to explore React, Java, Data Structures & Algorithms, and backend
+                        development.
+
+                        I'm particularly interested in solving real-world problems through technology, participating in
+                        hackathons, and building projects that challenge me to learn something new. Every project I
+                        create is an opportunity to write cleaner code, improve my design thinking, and become a better
+                        developer.
+
+                        When I'm not coding, you'll usually find me learning new technologies, exploring innovative
+                        ideas, or planning my next project.
+
+                        I'm always excited to learn, collaborate, and grow as a developer.</B></P>
+            </div>
+        </section>
+        <section class="skills">
+            <b>
+                <h1><SPAN><b>SKILLS</b></SPAN></h1>
+
+                <div class="myskills">
+                    <p id="frontend">
+                    <h2>FRONTEND</h2>
+                    <ul>
+                        <li id="html">HTML5</li>
+                        <LI id="css">CSS3</LI>
+                        <li id="res">RESPONSIVE DESIGN</li>
+                    </ul>
+                    </p>
+                    <p id="tools">
+                    <h2>TOOLS</h2>
+                    <UL>
+                        <li id="git">GIT</li>
+                        <LI id="github">GITHUB</LI>
+                        <LI id="vs">VS CODE</LI>
+                    </UL>
+                    </p>
+
+                </div>
+            </b>
+        </section>
+    </main>
 
 </body>
 
