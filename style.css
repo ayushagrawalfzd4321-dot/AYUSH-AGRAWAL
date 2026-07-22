@@ -1,5 +1,6 @@
 body {
-    color: teal;
+    color:rgb(35, 87, 39);
+background-color:rgb(123, 247, 203);
     font-family: systm-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -9,7 +10,7 @@ body {
     align-items: centEr;
     width: 450px;
     box-shadow: 7px 9px teal;
-    border-color: teal;
+    border-color:teal;
     border-style: solid;
     border-width: 5px;
 
@@ -36,7 +37,7 @@ body {
     position: sticky;
     top: 0px;
     border-bottom: 5px solid teal;
-    background-color: white;
+    background-color: rgb(123, 247, 203);
     margin: 0px;
     padding: 0px;
 
@@ -99,12 +100,15 @@ body {
 
 #svghtml {
     width: 150px;
-    
+
 
 }
-.html{margin-top: 20px;
+
+.html {
+    margin-top: 20px;
 
 }
+
 #res {
     font-size: 20px;
 }
@@ -137,19 +141,22 @@ body {
     font-weight: 1000;
 }
 
-.csstext{display: flex;
+.csstext {
+    display: flex;
     justify-content: center;
-font-size: 25px;
+    font-size: 25px;
     font-weight: 1000;
-    color:black;
+    color: black;
     margin: 0px;
     padding: 0px;
 }
-.htmltext{display: flex;
+
+.htmltext {
+    display: flex;
     justify-content: center;
-font-size: 25px;
+    font-size: 25px;
     font-weight: 1000;
-    color:black;
+    color: black;
     margin: 0px;
     padding: 0px;
 }
