@@ -1,161 +1,161 @@
 body {
-    background-color: rgb(123, 247, 203);
-    color: teal;
+    background-color: rgb(30,22,22);
+    color: rgb(122, 62, 62);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
-    .hero {
-        display: flex;
-        flex-direction: column;
-        align-items: centEr;
-        width: 450px;
-        box-shadow: 7px 9px teal;
-        border-color: teal;
-        border-style: solid;
-        border-width: 5px;
-
-        justify-content: center;
-
-    }
-
-    .heroblock {
-        display: flex;
-
-        justify-content: cenTEr;
-
-    }
-
-    .h {
-        margin: 0px;
-
-
-    }
-
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        position: sticky;
-        top: 0px;
-        border-bottom: 5px solid teal;
-        background-color: rgb(123, 247, 203);
-        margin: 0px;
-        padding: 0px;
-
-    }
-
-    .nav {
-        display: flex;
-        gap: 10px
-    }
-
-    .ayu {
-        display: flex;
-        align-content: center;
-        font-size: 60px;
-    }
-
-    .ayuwave {
-        display: flex;
-
-    }
-
-    .insta {
-
-        height: 30px;
-        border-radius: 8px;
-        display: flex;
-        justify-items: center;
-    }
-
-    .git {
-
-        height: 30px;
-        border-radius: 20px;
-        display: flex;
-        justify-items: center;
-    }
-
-    .myintro {
-        display: flex;
-        justify-content: center;
-    }
-
-    #myintro {
-        max-width: 800px;
-    }
-
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    border-bottom: 5px solid rgb(122, 62, 62);;
+    background-color: rgb(30, 22, 22)
     
-    main{
-        margin: 130px;
-    }
+}
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: centEr;
+    width: 450px;
+    box-shadow: 7px 9px rgb(122, 62, 62);;
+    border-color: rgb(122, 62, 62);;
+    border-style: solid;
+    border-width: 5px;
 
-    #frontend {
-        display: flex;
-        list-style-type: none;
-        justify-content: space-between;
-    }
+    justify-content: center;
 
-    #svghtml {
-        width: 150px;
+}
 
+.heroblock {
+    display: flex;
 
-    }
+    justify-content: cenTEr;
 
-    .html {
-        margin-top: 20px;
+}
 
-    }
-
-    #res {
-        font-size: 20px;
-    }
+.h {
+    margin: 0px;
 
 
-    #tools {
-        display: flex;
-        list-style-type: none;
-        justify-content: space-between
-    }
+}
 
-    #GITHUB {
-        display: flex;
-        text-align: right;
-    }
 
-    .githubtext {
-        display: flex;
-        justify-content: center;
-        color: black;
-        font-size: 25px;
-        font-weight: 1000;
-    }
 
-    .vscode {
-        display: flex;
-        justify-content: center;
-        color: rgb(0, 0, 0);
-        font-size: 25px;
-        font-weight: 1000;
-    }
+.nav {
+    display: flex;
+    gap: 10px
+}
 
-    .csstext {
-        display: flex;
-        justify-content: center;
-        font-size: 25px;
-        font-weight: 1000;
-        color: black;
-        margin: 0px;
-        padding: 0px;
-    }
+.ayu {
+    display: flex;
+    align-content: center;
+    font-size: 60px;
+}
 
-    .htmltext {
-        display: flex;
-        justify-content: center;
-        font-size: 25px;
-        font-weight: 1000;
-        color:black;
-        margin: 0px;
-        padding: 0px;
-    }
-    section{
-        margin-top:80px;
-    }
+.ayuwave {
+    display: flex;
+
+}
+
+.insta {
+
+    height: 30px;
+    border-radius: 8px;
+    display: flex;
+    justify-items: center;
+}
+
+.git {
+
+    height: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-items: center;
+}
+
+.myintro {
+    display: flex;
+    justify-content: center;
+}
+
+#myintro {
+    max-width: 800px;
+}
+
+
+main {
+    margin: 130px;
+}
+
+#frontend {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+#svghtml {
+    width: 150px;
+
+
+}
+
+.html {
+    margin-top: 20px;
+
+}
+
+#res {
+    font-size: 20px;
+}
+
+
+#tools {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between
+}
+
+#GITHUB {
+    display: flex;
+    text-align: right;
+}
+
+.githubtext {
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-size: 25px;
+    font-weight: 1000;
+}
+
+.vscode {
+    display: flex;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    font-weight: 1000;
+}
+
+.csstext {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: 1000;
+    color: black;
+    margin: 0px;
+    padding: 0px;
+}
+
+.htmltext {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: 1000;
+    color: black;
+    margin: 0px;
+    padding: 0px;
+}
+
+section {
+    margin-top: 80px;
+}
