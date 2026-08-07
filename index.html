@@ -8,17 +8,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <title>AYUSH AGRAWAL</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./src/output.css">
 
 </head>
 
-<body>
+<body class="bg-black text-emerald-500 font-mono m-7">
     <header>
 
-        <h1 class="navbar">
-            <div class="ayuwave">
-                <span class="ayu">Hi, I'm Ayush</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="100px" height="120px" viewBox="0 10 50 50">
+        <div class="navbar border-b flex ">
+            <div class="ayuwave gap-5 flex">
+                <span class="ayu flex justify-center items-center text-6xl font-bold ">Hi, I'm Ayush</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="100px" height="120px" viewBox="5 7 50 50">
                     <path d="M0 0h48v48H0z" fill="none" />
                     <path fill="#45413c" d="M11.5 45.5a12.5 1.5 0 1 0 25 0a12.5 1.5 0 1 0-25 0" opacity=".15" />
                     <path fill="#ffe500"
@@ -31,7 +31,7 @@
                         d="m33.33 22.52l-3.57 3.57a6 6 0 0 0 0 8.49h0M24.11 8.76a9.06 9.06 0 0 1 4.31 2a9.7 9.7 0 0 1 2.7 4m-6.44-8.67A11.06 11.06 0 0 1 30 8.51a11.84 11.84 0 0 1 3.33 4.93M4.65 24.24a9 9 0 0 0 .79 4.67a9.65 9.65 0 0 0 3.17 3.63M1.92 24.1a11.07 11.07 0 0 0 1 5.77a12 12 0 0 0 3.91 4.49" />
                 </svg>
             </div>
-            <div class="nav"><a href=""></a>
+            <div class="flex ml-auto items-center"><a href=""></a>
                 <a class="insta" target="_blank" href="https://www.instagram.com/ayush__15_12/">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" fill="teal">
                         <path
@@ -44,21 +44,22 @@
                             d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.85 10.9.57.1.78-.25.78-.55v-2.15c-3.19.69-3.86-1.54-3.86-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.69.08-.69 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.25 3.34.96.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.47.11-3.06 0 0 .97-.31 3.17 1.17a10.96 10.96 0 0 1 5.78 0c2.2-1.48 3.17-1.17 3.17-1.17.62 1.59.23 2.77.11 3.06.73.8 1.18 1.82 1.18 3.07 0 4.41-2.69 5.38-5.25 5.67.41.35.78 1.03.78 2.08v3.08c0 .3.21.66.79.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" />
                     </svg></a>
             </div>
+        </div>
 
-        </h1>
-        <h2 class="heroblock">
-            <div class="hero">
+        <div class="heroblock flex justify-center text-2xl m-20">
+            <div class="hero border-5 p-3 flex flex-col shadow-[9px_9px_0px] items-center ">
                 <p class="h">Aspiring computer science student</p>
                 <p class="h">learning everyday</p>
-                <p class="h">to improve every secomd</p>
+                <p class="h">to improve every second</p>
             </div>
-        </h2>
+        </div>
     </header>
-    <main>
-        <section class="aboutme" ID="aboutme">
-            <h1><SPAN><b>ABOUT ME</b></SPAN></h1>
-            <div class="myintro">
-                <P id="myintro"><b>Hi, I'm Ayush, an aspiring Software Engineer and first-year Computer Science student
+    <main class="flex flex-col gap-15">
+        <section id="aboutme" class="aboutme flex flex-col gap-10">
+            <span class="text-3xl">ABOUT ME...</span>
+            <div class=" myintro flex justify-center">
+                <P class="myintro w-3/4"><b>Hi, I'm Ayush, an aspiring Software Engineer and first-year Computer Science
+                        student
                         with a passion for creating modern, user-friendly web applications.
 
                         I enjoy turning ideas into interactive websites and continuously improving my skills through
@@ -72,142 +73,203 @@
                         developer.
 
                         When I'm not coding, you'll usually find me learning new technologies, exploring innovative
-                        ideas, or planning my next project.
+                        - ideas, or planning my next project.
 
                         I'm always excited to learn, collaborate, and grow as a developer.</B></P>
             </div>
         </section>
-        <section class="skills" id="skills">
-            <b>
-                <h1><SPAN><b>SKILLS</b></SPAN></h1>
+        <section class="skills  flex flex-col font-bold gap-15" id="skills">
 
-                <div class="myskills">
+            <SPAN class="text-3xl">SKILLS...</SPAN>
 
-                    <h2>FRONTEND</h2>
-                    <ul id="frontend">
-                        <li id="html">
-                            <p class="htmltext">HTML</p>
-                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="130" height="130"
-                                viewBox="0 -0 44 44">
-                                <path fill="#E65100" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path>
-                                <path fill="#FF6D00" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path>
-                                <path fill="#FFF"
-                                    d="M24,25v-4h8.6l-0.7,11.5L24,35.1v-4.2l4.1-1.4l0.3-4.5H24z M32.9,17l0.3-4H24v4H32.9z">
-                                </path>
-                                <path fill="#EEE"
-                                    d="M24,30.9v4.2l-7.9-2.6L15.7,27h4l0.2,2.5L24,30.9z M19.1,17H24v-4h-9.1l0.7,12H24v-4h-4.6L19.1,17z">
-                                </path>
+            <ul class="flex w-full gap-8 justify-around flex-wrap" id="frontend">
+                <li class="w-[150px]  h-[170px] border-2" id="html">
+                    <p class="flex justify-center">HTML</p>
+                    <svg class="w-full" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="130" height="130"
+                        viewBox="2 0 44 44">
+                        <path fill="#E65100" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path>
+                        <path fill="#FF6D00" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path>
+                        
+                        <path fill="#FFF"
+                            d="M24,25v-4h8.6l-0.7,11.5L24,35.1v-4.2l4.1-1.4l0.3-4.5H24z M32.9,17l0.3-4H24v4H32.9z">
+                        </path>
+                        <path fill="#EEE"
+                            d="M24,30.9v4.2l-7.9-2.6L15.7,27h4l0.2,2.5L24,30.9z M19.1,17H24v-4h-9.1l0.7,12H24v-4h-4.6L19.1,17z">
+                        </path>
 
-                            </svg>
-                        </li>
-                        <LI id="css">
-                            <p class="csstext">CSS</p><svg xmlns="http://www.w3.org/2000/svg" x="100px" y="0px"
-                                width="130" height="130" viewBox="0 -0 44 44">
-                                <path fill="#0277BD" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path>
-                                <path fill="#039BE5" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path>
-                                <path fill="#FFF"
-                                    d="M33.1 13L24 13 24 17 28.9 17 28.6 21 24 21 24 25 28.4 25 28.1 29.5 24 30.9 24 35.1 31.9 32.5 32.6 21 32.6 21z">
-                                </path>
-                                <path fill="#EEE"
-                                    d="M24,13v4h-8.9l-0.3-4H24z M19.4,21l0.2,4H24v-4H19.4z M19.8,27h-4l0.3,5.5l7.9,2.6v-4.2l-4.1-1.4L19.8,27z">
-                                </path>
-                            </svg>
-                        </LI>
-                        <li style="color:black" id="res"><b>RESPONSIVE DESIGN</b><img
-                                src="svg/computer-responsive-svgrepo-com.svg"></li>
-                    </ul>
-
-
-                    <h2>TOOLS</h2>
-                    <UL id="tools">
-                        <li id="git"><img width="220px" id=svgit" src="svg/git-svgrepo-com.svg"></li>
-                        <LI id="github"><svg xmlns="http://www.w3.org/2000/svg" width="140" height="140"
-                                viewBox="0 0 24 24" fill="white">
-                                <path
-                                    d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.85 10.9.57.1.78-.25.78-.55v-2.15c-3.19.69-3.86-1.54-3.86-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.69.08-.69 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.25 3.34.96.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.47.11-3.06 0 0 .97-.31 3.17 1.17a10.96 10.96 0 0 1 5.78 0c2.2-1.48 3.17-1.17 3.17-1.17.62 1.59.23 2.77.11 3.06.73.8 1.18 1.82 1.18 3.07 0 4.41-2.69 5.38-5.25 5.67.41.35.78 1.03.78 2.08v3.08c0 .3.21.66.79.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" />
-                            </svg>
-                            <p class="githubtext">GITHUB</p>
-                        </LI>
-                        <LI id="vs"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="140" height="135"
-                                viewBox="0 0 48 48">
-                                <path fill="#29b6f6"
-                                    d="M44,11.11v25.78c0,1.27-0.79,2.4-1.98,2.82l-8.82,4.14L34,33V15L33.2,4.15l8.82,4.14 C43.21,8.71,44,9.84,44,11.11z">
-                                </path>
-                                <path fill="#0277bd"
-                                    d="M9,33.896L34,15V5.353c0-1.198-1.482-1.758-2.275-0.86L4.658,29.239 c-0.9,0.83-0.849,2.267,0.107,3.032c0,0,1.324,1.232,1.803,1.574C7.304,34.37,8.271,34.43,9,33.896z">
-                                </path>
-                                <path fill="#0288d1"
-                                    d="M9,14.104L34,33v9.647c0,1.198-1.482,1.758-2.275,0.86L4.658,18.761 c-0.9-0.83-0.849-2.267,0.107-3.032c0,0,1.324-1.232,1.803-1.574C7.304,13.63,8.271,13.57,9,14.104z">
-                                </path>
-                            </svg>
-                            <p CLASS="vscode">VS CODE</p>
-                        </LI>
-                    </UL>
-
-
-                </div>
-            </b>
-        </section>
-        <section class="projects" id="projects"><b>
-                <h1><b>PROJECTS</b></h1>
-                <P>COMING SOON......</P>
-            </b>
-        </section>
-        <section id="contacts" class=contact>
-            <h1><b>Let's Connnect</b></h1>
-            <p class="con"><b>Have an opportunity, collaboration, or just want to connect? Feel free to reach out</b>
-            </p>
-            <ul>
-                <li><a target="_blank" href="https://www.instagram.com/ayush__15_12/" style="color:teal">INSTAGRAM</a>
+                    </svg>
                 </li>
-                <li><a href="mailto: ayushagrawalfzd4321@gmail.com" target="_blank" style="color:teal">Email</a></li>
+                <li class="w-[150px]  h-[170px] border-2" id="css">
+                    <p class="csstext flex justify-center">CSS</p><svg xmlns="http://www.w3.org/2000/svg" x="0px"
+                        y="0px" width="150" height="130" viewBox="2 0 44 44">
+                        <path fill="#1565C0" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path>
+                        <path fill="#1976D2" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path>
+                        <path fill="#FFF"
+                            d="M33.1 13L24 13 24 17 28.9 17 28.6 21 24 21 24 25 28.4 25 28.1 29.5 24 30.9 24 35.1 31.9 32.5 32.6 21 32.6 21z">
+                        </path>
+                        <path fill="#EEE"
+                            d="M24,13v4h-8.9l-0.3-4H24z M19.4,21l0.2,4H24v-4H19.4z M19.8,27h-4l0.3,5.5l7.9,2.6v-4.2l-4.1-1.4L19.8,27z">
+                        </path>
+
+                    </svg>
+                </li>
+                <li class="w-[150px]  h-[170px] border-2" id="css">
+                    <p class="csstext flex justify-center">TAILWIND</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="140" height="140"
+                        viewBox="-5 -4 55 55">
+                        <path fill="#00acc1"
+                            d="M24,9.604c-6.4,0-10.4,3.199-12,9.597c2.4-3.199,5.2-4.398,8.4-3.599 c1.826,0.456,3.131,1.781,4.576,3.247C27.328,21.236,30.051,24,36,24c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.6 c-1.825-0.456-3.13-1.781-4.575-3.247C32.672,12.367,29.948,9.604,24,9.604L24,9.604z M12,24c-6.4,0-10.4,3.199-12,9.598 c2.4-3.199,5.2-4.399,8.4-3.599c1.825,0.457,3.13,1.781,4.575,3.246c2.353,2.388,5.077,5.152,11.025,5.152 c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.599c-1.826-0.456-3.131-1.781-4.576-3.246C20.672,26.764,17.949,24,12,24 L12,24z">
+                        </path>
+                    </svg>
+                </li>
+
+                <li class="w-[150px]  h-[170px] border-2" id="js">
+                    <p class="jstext flex justify-center">JAVASCRIPT</p>
+                    <!-- J - modern bold style -->
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="150" height="130"
+                        viewBox="2 0 44 44">
+
+                        <!-- Shield -->
+                        <path fill="#FBC02D" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z">
+                        </path>
+
+                        <!-- Right side -->
+                        <path fill="#FDD835" d="M24 8L24 39.9 35.2 36.7 37.7 8z">
+                        </path>
+
+                        <path fill="#FFFFFF" d="M12,29.004l7,1.942V11h4v26l-11-3.051V29.004z
+       M38.054,22L37,34.25L27,37v-4.601l6.75-1.855l0.25-3.75L27,28V11h12
+       l-0.345,4H31v8L38.054,22z">
+                        </path>
+
+
+
+
+                    </svg>
+                </li>
+
+
+
+
+                <li id="git" class="w-[150px]  h-[170px] border-2">
+                    <p CLASS="text-center">GIT</p><img width="150px" id="git-svg" src="svg/git-svgrepo-com.svg">
+                </li>
+
+                <li id="vs" class="w-[150px]  h-[170px] border-2">
+                    <p CLASS="text-center vscode">VS CODE</p><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                        width="140" height="135" viewBox="0 0 48 48">
+                        <path fill="#29b6f6"
+                            d="M44,11.11v25.78c0,1.27-0.79,2.4-1.98,2.82l-8.82,4.14L34,33V15L33.2,4.15l8.82,4.14 C43.21,8.71,44,9.84,44,11.11z">
+                        </path>
+                        <path fill="#0277bd"
+                            d="M9,33.896L34,15V5.353c0-1.198-1.482-1.758-2.275-0.86L4.658,29.239 c-0.9,0.83-0.849,2.267,0.107,3.032c0,0,1.324,1.232,1.803,1.574C7.304,34.37,8.271,34.43,9,33.896z">
+                        </path>
+                        <path fill="#0288d1"
+                            d="M9,14.104L34,33v9.647c0,1.198-1.482,1.758-2.275,0.86L4.658,18.761 c-0.9-0.83-0.849-2.267,0.107-3.032c0,0,1.324-1.232,1.803-1.574C7.304,13.63,8.271,13.57,9,14.104z">
+                        </path>
+                    </svg>
+
+                </li>
+
+                <li id="vs" class="w-[150px]  h-[170px] border-2">
+                    <p CLASS="text-center vscode">GITHUB</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 0 25 25" width="140" height="140">
+                        <!-- GitHub logo -->
+                        <path fill="#FFFFFF" d="M12 .297c-6.63 0-12 5.373-12 12
+        0 5.303 3.438 9.8 8.205 11.385
+        .6.113.82-.258.82-.577
+        0-.285-.01-1.04-.015-2.04
+        -3.338.724-4.042-1.61-4.042-1.61
+        -.546-1.387-1.333-1.756-1.333-1.756
+        -1.089-.745.084-.729.084-.729
+        1.205.084 1.838 1.236 1.838 1.236
+        1.07 1.835 2.809 1.305 3.495.998
+        .108-.776.418-1.305.762-1.605
+        -2.665-.3-5.466-1.332-5.466-5.93
+        0-1.31.465-2.38 1.235-3.22
+        -.135-.303-.54-1.523.105-3.176
+        0 0 1.005-.322 3.3 1.23
+        .96-.267 1.98-.399 3-.405
+        1.02.006 2.04.138 3 .405
+        2.28-1.552 3.285-1.23 3.285-1.23
+        .645 1.653.24 2.873.12 3.176
+        .765.84 1.23 1.91 1.23 3.22
+        0 4.61-2.805 5.625-5.475 5.92
+        .435.375.81 1.096.81 2.22
+        0 1.606-.015 2.896-.015 3.286
+        0 .315.21.69.825.57
+        C20.565 22.092 24 17.592 24 12.297
+        c0-6.627-5.373-12-12-12" />
+                    </svg>
+
+                </li>
+            </ul>
+
+
+
+
+
+        </section>
+        <section class="projects flex flex-col gap-10 " id="projects">
+            <span class="text-3xl">PROJECTS...</span>
+            <P>COMING SOON......</P>
+
+        </section>
+        <section id="contacts" class="flex flex-col gap-10">
+            <h1 class="text-3xl">Let's Connnect...</h1>
+            <p class="con">Have an opportunity, collaboration, or just want to connect? Feel free to reach out</p>
+            <ul class="flex gap-5">
+                <li class=""><a class="p-1 shadow-[4px_4px_0px] border-3" href="mailto:d4321@gmail.com" target="_blank"
+                        style="color:teal">Email</a></li>
+                <li class="s"><a class="p-1 font-bold shadow-[4px_4px_0px] border-3"
+                        href="https://www.instagram.com/ayush__15_12/" target="_blank" style="color:teal">Instagram</a>
+                </li>
             </ul>
         </section>
 
     </main>
-    <footer><B>
-            <div class="footerayu">AYUSH &pointint; AGRAWAL</div>
-            <div class="profiles">
-                <a target="_blank" href="https://github.com/ayushagrawalfzd4321-dot" class="github">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="teal">
-                        <path
-                            d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.85 10.9.57.1.78-.25.78-.55v-2.15c-3.19.69-3.86-1.54-3.86-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.69.08-.69 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.25 3.34.96.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.47.11-3.06 0 0 .97-.31 3.17 1.17a10.96 10.96 0 0 1 5.78 0c2.2-1.48 3.17-1.17 3.17-1.17.62 1.59.23 2.77.11 3.06.73.8 1.18 1.82 1.18 3.07 0 4.41-2.69 5.38-5.25 5.67.41.35.78 1.03.78 2.08v3.08c0 .3.21.66.79.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" />
-                    </svg>
-                </a>
-               
-                <a href="https://www.instagram.com/ayush__15_12" target="_blank" class="instag">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" fill="teal">
-                        <path
-                            d="M7.75 2C4.57 2 2 4.57 2 7.75v8.5C2 19.43 4.57 22 7.75 22h8.5C19.43 22 22 19.43 22 16.25v-8.5C22 4.57 19.43 2 16.25 2h-8.5zm0 2h8.5A3.75 3.75 0 0 1 20 7.75v8.5A3.75 3.75 0 0 1 16.25 20h-8.5A3.75 3.75 0 0 1 4 16.25v-8.5A3.75 3.75 0 0 1 7.75 4zm8.75 1.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z" />
-                    </svg>
-                </a>
-              
-                <a href="mailto:ayushagrawalfzd4321@gmail.com" class="mail-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
-                        stroke="teal" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-                        <path d="M22 7L12 13 2 7"></path>
-                    </svg>
-                </a>
-            </div>
-            <div class="profiles ">
-                <a href="#aboutme" class="direct">ABOUT ME</a>
+    <footer class="mt-10 flex border-t-2 pt-5 flex-col gap-y-7">
+        <div class="footerayu text-center">AYUSH &pointint; AGRAWAL</div>
+        <div class="profiles flex justify-around">
+            <a target="_blank" href="https://github.com/ayushagrawalfzd4321-dot" class="github">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="teal">
+                    <path
+                        d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.85 10.9.57.1.78-.25.78-.55v-2.15c-3.19.69-3.86-1.54-3.86-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.69.08-.69 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.25 3.34.96.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.47.11-3.06 0 0 .97-.31 3.17 1.17a10.96 10.96 0 0 1 5.78 0c2.2-1.48 3.17-1.17 3.17-1.17.62 1.59.23 2.77.11 3.06.73.8 1.18 1.82 1.18 3.07 0 4.41-2.69 5.38-5.25 5.67.41.35.78 1.03.78 2.08v3.08c0 .3.21.66.79.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" />
+                </svg>
+            </a>
 
-                <a href="#projects" class="direct">PROJECTS</a>
+            <a href="https://www.instagram.com/ayush__15_12" target="_blank" class="instag">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" fill="teal">
+                    <path
+                        d="M7.75 2C4.57 2 2 4.57 2 7.75v8.5C2 19.43 4.57 22 7.75 22h8.5C19.43 22 22 19.43 22 16.25v-8.5C22 4.57 19.43 2 16.25 2h-8.5zm0 2h8.5A3.75 3.75 0 0 1 20 7.75v8.5A3.75 3.75 0 0 1 16.25 20h-8.5A3.75 3.75 0 0 1 4 16.25v-8.5A3.75 3.75 0 0 1 7.75 4zm8.75 1.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z" />
+                </svg>
+            </a>
 
-                <a href="#skills" class="direct">SKILLS</a>
+            <a href="mailto:ayushagrawalfzd4321@gmail.com" class="mail-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+                    stroke="teal" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                    <path d="M22 7L12 13 2 7"></path>
+                </svg>
+            </a>
+        </div>
+        <div class="profiles flex justify-around">
+            <a href="#aboutme" class="direct border-2 p-2">ABOUT ME</a>
 
-                <a href="#contacts" class="direct">CONNECT</a>
-            </div>
-            <p id="copyright">&copy 2026 Ayush Agrawal. All Rights Reserved.</p>
-        </B>
+            <a href="#projects" class="direct border-2 p-2">PROJECTS</a>
+
+            <a href="#skills" class="direct border-2 p-2">SKILLS</a>
+
+            <a href="#contacts" class="direct border-2 p-2">CONNECT</a>
+        </div>
+        <p id="copyright" class="text-center">&copy 2026 Ayush Agrawal. All Rights Reserved.</p>
+
+
     </footer>
-    </B>
-    </footer>
-
-    </B>
-    </footer>
-    <a class="top" href="#top">&uArr;</a>
+    <a class="top fixed bg-emerald-400 rounded-full px-2 text-black font-bold text-5xl right-0 bottom-0" href="#top">&uArr;</a>
 
 
 </body>
