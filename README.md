@@ -43,7 +43,7 @@ src/
 Clone the repository:
 
 ```bash
-git clone YOUR_REPOSITORY_URL
+git clone https://github.com/ayushagrawalfzd4321-dot/AYUSH-AGRAWAL.git
 ```
 
 Go into the project directory:
@@ -78,7 +78,7 @@ More projects will be added as I continue learning and building.
 
 | Project             | Technologies        | Demo                       |
 | ------------------- | ------------------- | -------------------------- |
-| Todo App            | React, Tailwind CSS | [Live Demo](YOUR_TODO_URL) |
+| Todo App            | React, Tailwind CSS | [Live Demo](https://to-do-olive-pi-99.vercel.app/) |
 | More coming soon... | —                   | —                          |
 
 ## 📈 Currently Learning
