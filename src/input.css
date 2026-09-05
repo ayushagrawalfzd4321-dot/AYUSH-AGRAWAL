@@ -1,1 +1,23 @@
 @import "tailwindcss";
+@theme {
+  --font-poppins: "Poppins", sans-serif;
+  
+  --font-share: "Share Tech Mono", monospace;
+  --font-mono: "JetBrains Mono", monospace;
+}
+@keyframes glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 2px #9fdf56);
+  }
+
+  50% {
+    filter: drop-shadow(0 0 10px #8ec451);
+  }
+}
+
+.glow {
+  animation: glow 1s ease-in-out infinite;
+}
+.bg{
+  background-color: rgba(59, 59, 59, 0.64);
+}
