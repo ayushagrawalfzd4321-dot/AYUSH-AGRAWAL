@@ -1,284 +1,591 @@
-<!DOCTYPE html>
-
-
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./src/output.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <title>AYUSH AGRAWAL</title>
-    <link rel="stylesheet" href="./src/output.css">
+  <body class="m-0 font-extrabold">
+    <div class="fixed w-25 h-80 left-3 p-3 top-80 bg rounded-xl"></div>
+    <header class="shadow-gray-800 shadow-[0px_10px_99px_5px]">
+      <nav
+        class="bg-gray-600 flex max-w-screen min-[395px]:px-4 px-1 min-[1000px]:justify-around justify-between gap-5 items-center min-h-20"
+      >
+        <div class="logo flex h-15">
+          <svg width="30" viewBox="0 0 96 96" fill="none">
+            <g fill="#B8C7CC">
+              <path
+                d="M27 3h9v12h8V3h9v12h7V3h9v12h1a11 11 0 0 1 11 11v1h12v9H81v8h12v9H81v8h12v9H81v1a11 11 0 0 1-11 11h-1v12h-9V81h-8v12h-9V81h-8v12h-9V81h-1A11 11 0 0 1 15 70v-1H3v-9h12v-8H3v-9h12v-8H3v-9h12v-1a11 11 0 0 1 11-11h1V3Z"
+              />
+              <path d="M27 27h42v42H27V27Zm12 12v18h18V39H39Z" fill="#626B70" />
+            </g>
+          </svg>
+          <span
+            class="min-[585px]:text-4xl font-bold text-md min-[505px]:text-2xl font-poppin content-center mx-2 text-white"
+            >~/AYUSH...</span
+          >
 
-</head>
-
-<body class=" text font-mono ">
-    <header class="border-b-5">
-
-        <div class="navbar bg-indigo-600 px-3 h-20 flex flex-col ">
-              <div class="flex ml-auto items-center gap-2">
-                <a class="insta " target="_blank" href="https://www.instagram.com/ayush__15_12/">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="25" height="25" fill="">
-                        <path
-                            d="M7.75 2C4.57 2 2 4.57 2 7.75v8.5C2 19.43 4.57 22 7.75 22h8.5C19.43 22 22 19.43 22 16.25v-8.5C22 4.57 19.43 2 16.25 2h-8.5zm0 2h8.5A3.75 3.75 0 0 1 20 7.75v8.5A3.75 3.75 0 0 1 16.25 20h-8.5A3.75 3.75 0 0 1 4 16.25v-8.5A3.75 3.75 0 0 1 7.75 4zm8.75 1.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z" />
-                    </svg>
-                </a>
-                <a class="git" target="_blank" href="https://github.com/ayushagrawalfzd4321-dot"><svg
-                        xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="" )>
-                        <path
-                            d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.85 10.9.57.1.78-.25.78-.55v-2.15c-3.19.69-3.86-1.54-3.86-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.69.08-.69 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.25 3.34.96.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.47.11-3.06 0 0 .97-.31 3.17 1.17a10.96 10.96 0 0 1 5.78 0c2.2-1.48 3.17-1.17 3.17-1.17.62 1.59.23 2.77.11 3.06.73.8 1.18 1.82 1.18 3.07 0 4.41-2.69 5.38-5.25 5.67.41.35.78 1.03.78 2.08v3.08c0 .3.21.66.79.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" />
-                    </svg></a>
-            </div>
-            <div class="ayuwave h-20  flex m-0 ">
-                <span class="ayu flex justify-center items-center sm:text-3xl text-4xl font-black ">Hi, I'm Ayush</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="60px" height="50px" viewBox="5 17 55 30">
-                    <path d="M0 0h48v48H0z" fill="none" />
-                    <path fill="#45413c" d="M11.5 45.5a12.5 1.5 0 1 0 25 0a12.5 1.5 0 1 0-25 0" opacity=".15" />
-                    <path fill="#ffe500"
-                        d="m33.46 19.26l-.13 3.26l-11.22-11.23a2.59 2.59 0 0 0-3.44-.29a2.49 2.49 0 0 0-.19 3.7l-1.59-1.59a2.77 2.77 0 0 0-3.77-.21a2.67 2.67 0 0 0-.1 3.87l-.02-.05a2.53 2.53 0 0 0-3-.46a2.5 2.5 0 0 0-.53 3.94l3 3a2.19 2.19 0 0 0-3.24.16a2.28 2.28 0 0 0 .24 3L22 39a9.39 9.39 0 0 0 13.37-.06a14.47 14.47 0 0 0 4-10.81L39 16a1.08 1.08 0 0 0-1.08-1a4.45 4.45 0 0 0-4.46 4.26" />
-                    <path fill="#fff48c"
-                        d="M33.33 22.52L22.11 11.29a2.59 2.59 0 0 0-3.44-.29a2.48 2.48 0 0 0-.36 3.49a1.8 1.8 0 0 1 .36-.37a2.59 2.59 0 0 1 3.44.27l9.66 9.67Zm5.76-3.4L39 16a1.08 1.08 0 0 0-1.08-1a4.45 4.45 0 0 0-4.45 4.29l-.13 3.26l.13-.14a4.46 4.46 0 0 1 4.45-4.29a1.17 1.17 0 0 1 1.17 1" />
-                    <path fill="none" stroke="#45413c" stroke-linecap="round" stroke-linejoin="round"
-                        d="m33.46 19.26l-.13 3.26l-11.22-11.23a2.59 2.59 0 0 0-3.44-.29a2.49 2.49 0 0 0-.19 3.7l-1.59-1.59a2.77 2.77 0 0 0-3.77-.21a2.67 2.67 0 0 0-.1 3.87l-.02-.05a2.53 2.53 0 0 0-3-.46a2.5 2.5 0 0 0-.53 3.94l3 3a2.19 2.19 0 0 0-3.24.16a2.28 2.28 0 0 0 .24 3L22 39a9.39 9.39 0 0 0 13.37-.06a14.47 14.47 0 0 0 4-10.81L39 16a1.08 1.08 0 0 0-1.08-1h0a4.45 4.45 0 0 0-4.46 4.26m-21.12 3.92l6.06 6.05m-5.38-12.45l8.91 8.91m-3.45-10.97l7.21 7.22" />
-                    <path fill="none" stroke="#45413c" stroke-linecap="round" stroke-linejoin="round"
-                        d="m33.33 22.52l-3.57 3.57a6 6 0 0 0 0 8.49h0M24.11 8.76a9.06 9.06 0 0 1 4.31 2a9.7 9.7 0 0 1 2.7 4m-6.44-8.67A11.06 11.06 0 0 1 30 8.51a11.84 11.84 0 0 1 3.33 4.93M4.65 24.24a9 9 0 0 0 .79 4.67a9.65 9.65 0 0 0 3.17 3.63M1.92 24.1a11.07 11.07 0 0 0 1 5.77a12 12 0 0 0 3.91 4.49" />
-                </svg>
-            </div>
-          
+          <span
+            class="text-emerald-200 font-mono min-[585px]:text-4xl min-[505px]:text-2xl font-bold content-center"
+            >[</span
+          >
+          <span
+            class="min-[585px]:text-4xl content-center font-mono font-black min-[505px]:text-2xl text-white"
+            >CSE</span
+          >
+          <span
+            class="text-emerald-200 font-mono min-[585px]:text-4xl font-bold min-[505px]:text-2xl content-center"
+            >]</span
+          >
+          <div
+            class="version font-mono bg-gray-500 text-emerald-200 min-[505px]:h-5 h-3 min-[505px]:w-10 px-1 rounded-sm text-center mt-7 border-white text-[8px] min-[505px]:text-sm"
+          >
+            v1.0
+          </div>
         </div>
 
-        <!-- <div class="heroblock flex justify-center my-10"> -->
-        </header>
-        <main class="flex  flex-col mx-5 my-10  font-bold gap-15">
-        <div class="hero border-0 bg-red-600 relative hover:bottom-2 rounded-xl shadow-black shadow-[10px_10px_0px]  hover:right-2 transition duration-1000 py-2 px-0 my-5 max-w-125 w-full min-[500px]:mx-auto flex flex-col  font-bold shadow-black shadow-[9px_9px_0px] items-center ">
-            <p class="h">Aspiring Web developer</p>
-            <p class="h">learning everyday</p>
-            <p class="h">to improve every second</p>
-        
-    </div>
-        <section id="aboutme" class="aboutme bg-amber-300 p-6 w-5/6 mx-auto relative hover:bottom-2 shadow-black shadow-[10px_10px_0px]  hover:right-2 transition duration-1000 rounded-xl gap-10 flex flex-col">
-         <span class="text-3xl">ABOUT  ME...</span>
-            <div class=" myintro flex justify-center">
-                <P class="myintro font-bold w-3/4 "><b>Hi, I'm Ayush, an aspiring Software Engineer and first-year Computer Science
-                        student
-                        with a passion for creating modern, user-friendly web applications.
+        <ul
+          class="navbar text-gray-400 h-full px-10 gap-5 items-center min-[1200px]:gap-10 max-[1000px]:hidden min-w-0 flex justify-center flex-1 font-mono font-bold"
+        >
+          <li class="border-amber-50 h-10 content-center text-center boder">
+            Projects
+          </li>
+          <li class="border-amber-50 h-10 content-center text-center boder">
+            Stack
+          </li>
+          <li class="border-amber-50 h-10 content-center text-center boder">
+            Log
+          </li>
+          <li class="border-amber-50 h-10 content-center text-center boder">
+            Contact
+          </li>
+          <li class="border-amber-50 h-10 content-center text-center boder">
+            Terminal
+          </li>
+        </ul>
 
-                        I enjoy turning ideas into interactive websites and continuously improving my skills through
-                        hands-on projects. Currently, I'm strengthening my foundation in HTML, CSS, JavaScript, Git, and
-                        GitHub, while preparing to explore React, Java, Data Structures & Algorithms, and backend
-                        development.
+        <div class="activity h-full gap-2 flex items-center relative">
+          <svg
+            width="10"
+            height="10"
+            viewBox="0 0 16 16"
+            class="glow max-[600px]:hidden rounded-4xl"
+            fill="none"
+          >
+            <circle cx="8" cy="8" r="8" fill="#afdf56"></circle>
+          </svg>
+          <span class="text-lime-300 max-[600px]:text-[11px] font-mono"
+            >System Status : Active
+          </span>
+        </div>
+      </nav>
+      <nav
+        class="mobilenav min-[1000px]:hidden flex bg-gray-600 h-10 font-mono font-bold min-[495px]:text-lg max-[450] text-gray-400"
+      >
+        <ul class="flex justify-around m-0 w-full">
+          <li class="">Projects</li>
+          <li class="">Stack</li>
+          <li class="">Log</li>
+          <li class="">Contact</li>
+          <li class="">Terminal</li>
+        </ul>
+      </nav>
+    </header>
+    <main class="font-mono flex flex-col gap-20 mx-5">
+      <div class="flex-wrap mx-auto w-full flex justify-around gap-8 m-8">
+        <span
+          class="bg-gray-500 flex w-100 shadow-gray-500 shadow-[0px_10px_20px_5px] rounded-xl p-3 text-white"
+        >
+          <svg
+            width="70"
+            height="80"
+            viewBox="0 0 180 180"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="90"
+              cy="90"
+              r="70"
+              fill="none"
+              stroke="#000000"
+              stroke-width="14"
+            />
+            <circle
+              cx="90"
+              cy="90"
+              r="70"
+              fill="none"
+              stroke="#BEF264"
+              stroke-width="14"
+              stroke-linecap="butt"
+              stroke-dasharray="439.82"
+              stroke-dashoffset="8.80"
+              transform="rotate(-90 90 90)"
+            />
+            <text
+              x="90"
+              y="98"
+              text-anchor="middle"
+              font-family="monospace"
+              font-size="38"
+              font-weight="700"
+              fill="#BEF264"
+            >
+              98%
+            </text>
+          </svg>
+          <div class="flex flex-col gap-2 mx-auto justify-center">
+            <span
+              class="text-xl flex text-center text-lime-300 mx-auto font-share items-center"
+            >
+              Curiosity Engine
+            </span>
+            <div class="text-gray-300 text-center">Status:Active</div>
+          </div>
+        </span>
 
-                        I'm particularly interested in solving real-world problems through technology, participating in
-                        hackathons, and building projects that challenge me to learn something new. Every project I
-                        create is an opportunity to write cleaner code, improve my design thinking, and become a better
-                        developer.
+        <span
+          class="bg-gray-500 w-100 shadow-gray-500 flex shadow-[0px_10px_20px_5px] rounded-xl p-3 text-white"
+        >
+          <svg
+            width="80"
+            height="80"
+            viewBox="0 0 220 220"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M38 110H78L108 76L138 110H182"
+              stroke="#A3E635"
+              stroke-width="10"
+              stroke-linecap="butt"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M38 134H78L108 100L138 134H182"
+              stroke="#A3E635"
+              stroke-width="10"
+              stroke-linecap="butt"
+              stroke-linejoin="round"
+              opacity=".7"
+            />
+            <path
+              d="M38 158H78L108 124L138 158H182"
+              stroke="#A3E635"
+              stroke-width="10"
+              stroke-linecap="butt"
+              stroke-linejoin="round"
+              opacity=".4"
+            />
+            <circle cx="108" cy="60" r="8" fill="#A3E635" />
+          </svg>
+          <span class="flex flex-col mx-auto gap-2 justify-center">
+            <span
+              class="text-xl text-lime-300 mx-auto text-center font-share items-center"
+            >
+              Deep Work Flow</span
+            >
 
-                        When I'm not coding, you'll usually find me learning new technologies, exploring innovative
-                        - ideas, or planning my next project.
+            <div class="text-gray-300 text-center">Peak Performance</div>
+          </span>
+        </span>
 
-                        I'm always excited to learn, collaborate, and grow as a developer.</B></P>
+        <div
+          class="bg-gray-500 flex w-100 shadow-gray-500 shadow-[0px_10px_20px_5px] rounded-xl p-3 text-white"
+        >
+          <svg
+            width="70"
+            height="80"
+            viewBox="0 0 240 220"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <!-- Connections: precisely between circle edges -->
+            <g stroke="#A3E635" stroke-width="4" stroke-linecap="round">
+              <!-- Left to center -->
+              <path d="M59.4 62.4L99.6 93.9" />
+              <path d="M62 110H94" />
+              <path d="M59.4 157.6L99.6 126.1" />
+
+              <!-- Center to right -->
+              <path d="M140.4 93.9L180.6 62.4" />
+              <path d="M146 110H178" />
+              <path d="M140.4 126.1L180.6 157.6" />
+            </g>
+
+            <!-- Outline nodes -->
+            <g fill="none" stroke="#A3E635" stroke-width="5">
+              <circle cx="50" cy="55" r="12" />
+              <circle cx="50" cy="110" r="12" />
+              <circle cx="50" cy="165" r="12" />
+
+              <circle cx="120" cy="110" r="26" />
+
+              <circle cx="190" cy="55" r="12" />
+              <circle cx="190" cy="110" r="12" />
+              <circle cx="190" cy="165" r="12" />
+            </g>
+          </svg>
+          <div class="flex flex-col justify-center mx-auto gap-2">
+            <span
+              class="text-xl flex text-lime-300 mx-auto text-center font-share items-center"
+            >
+              Neural Network
+            </span>
+            <div class="text-gray-300 text-center">Learning Node:Active</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- block 1 -->
+
+      <div
+        class="bg-gray-500 flex gap-4 flex-col w-3/4 max-w-[1020px] mx-auto p-4 shadow-gray-700 shadow-[0px_10px_40px_1px] rounded-xl"
+      >
+        <div class="activity flex gap-2 items-center relative">
+          <svg
+            width="15"
+            height="15"
+            viewBox="0 0 24 22"
+            class="bordr rounded-4xl"
+            fill="none"
+          >
+            <circle cx="11" cy="11" r="15" fill="#afdf56"></circle>
+          </svg>
+
+          <span
+            class="text-lime-300 m font-mono max-[500px]:text-[13px] max-[400px]:text-[11px]"
+          >
+            ~/ayush/portfolio/about_me/$</span
+          >
+        </div>
+
+        <!--Divider-->
+
+        <div
+          class="m min-[1360px]:justify-between divider max-[1360px]:gap-9 max-[1247px]:gap-"
+        >
+          <div
+            class="min-[1360px]:text-6xl relative min-[690px]:text-5xl min-[541px]:text-4xl min-[447px]:text-3xl text-2xl font-poppins text-amber-50 font-bold"
+          >
+            <span class="font-poppins">Learning Through</span>
+            <div class="flex-col gap-5 flex justify-between">
+              <span>Building....</span>
+              <svg
+                class="w-full absolute min-[1365px]:right-15 min-[864px]:right-8 min-[1125px]:top-0 max-[965px]:hidden max-[950px]:top-20 max-[900px]:top-30 min-[1125px]:max-w-100 min-[1000px]:max-w-80 min-[950px]:max-w-75 min h-auto text-lime-300"
+                viewBox="20 10 300 280"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <!-- Background stars -->
+                <circle
+                  cx="67"
+                  cy="54"
+                  r="3"
+                  fill="currentColor"
+                  opacity=".45"
+                />
+                <circle
+                  cx="292"
+                  cy="61"
+                  r="3"
+                  fill="currentColor"
+                  opacity=".45"
+                />
+                <circle
+                  cx="315"
+                  cy="205"
+                  r="3"
+                  fill="currentColor"
+                  opacity=".45"
+                />
+                <circle
+                  cx="43"
+                  cy="214"
+                  r="3"
+                  fill="currentColor"
+                  opacity=".45"
+                />
+
+                <!-- Portal shadow -->
+                <path
+                  d="M110 233H250"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  opacity=".25"
+                />
+
+                <!-- Outer portal -->
+                <path
+                  d="M180 40L265 89V187L180 236L95 187V89L180 40Z"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linejoin="round"
+                  opacity=".45"
+                />
+
+                <!-- Inner portal -->
+                <path
+                  d="M180 65L242 101V173L180 209L118 173V101L180 65Z"
+                  fill="currentColor"
+                  opacity=".08"
+                />
+
+                <path
+                  d="M180 65L242 101V173L180 209L118 173V101L180 65Z"
+                  stroke="currentColor"
+                  stroke-width="4"
+                  stroke-linejoin="round"
+                />
+
+                <!-- Layered depth lines -->
+                <path
+                  d="M118 101L180 137L242 101M180 137V209"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linejoin="round"
+                  opacity=".65"
+                />
+
+                <!-- Code brackets -->
+                <path
+                  d="M158 121L142 137L158 153M202 121L218 137L202 153"
+                  stroke="currentColor"
+                  stroke-width="5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+                <!-- Central slash -->
+                <path
+                  d="M190 114L170 160"
+                  stroke="currentColor"
+                  stroke-width="5"
+                  stroke-linecap="round"
+                />
+
+                <!-- Floating node paths -->
+                <path
+                  d="M96 89L70 74M264 89L290 74M96 187L71 205M264 187L289 205"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  opacity=".45"
+                />
+                <circle cx="65" cy="71" r="5" fill="currentColor" />
+                <circle cx="295" cy="71" r="5" fill="currentColor" />
+                <circle cx="66" cy="208" r="5" fill="currentColor" />
+                <circle cx="294" cy="208" r="5" fill="currentColor" />
+              </svg>
             </div>
-        </section>
-        <section class="skills  flex flex-col bg-red-500 px-6 pt-4 pb-8 w-5/6 mx-auto relative hover:bottom-2 shadow-black shadow-[10px_10px_0px]  hover:right-2 transition duration-1000 rounded-xl font-bold gap-15" id="skills">
+            <div class="flex">
+              <svg
+                class="max-w-100 max-h-60"
+                viewBox="20 19 290 200"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <!-- Terminal -->
+                <rect
+                  x="20"
+                  y="24"
+                  width="280"
+                  height="190"
+                  rx="16"
+                  fill="#4B5563"
+                  stroke="#6B7280"
+                  stroke-width="2"
+                />
 
-            <SPAN class="text-3xl">SKILLS...</SPAN>
+                <!-- Header -->
+                <path d="M20 66H300" stroke="#6B7280" stroke-width="2" />
+                <circle cx="46" cy="45" r="6" fill="#F87171" />
+                <circle cx="66" cy="45" r="6" fill="#FBBF24" />
+                <circle cx="86" cy="45" r="6" fill="#6EE7B7" />
+                <text
+                  x="160"
+                  y="51"
+                  text-anchor="middle"
+                  fill="#D1D5DB"
+                  font-family="monospace"
+                  font-size="13"
+                >
+                  about-me.js
+                </text>
 
-            <ul class="flex w-full gap-8 justify-around flex-wrap" id="frontend">
-                <li class="w-[150px]  h-[170px] rounded-xl  relative hover:bottom-2 hover:right-2 transition duration-100 shadow-black shadow-[10px_10px_0px] bg-emerald-400 border-4 " id="html">
-                    <p class="flex justify-center">HTML</p>
-                    <svg class="w-full" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="130" height="130"
-                        viewBox="2 0 44 44">
-                        <path fill="#E65100" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path>
-                        <path fill="#FF6D00" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path>
-                        
-                        <path fill="#FFF"
-                            d="M24,25v-4h8.6l-0.7,11.5L24,35.1v-4.2l4.1-1.4l0.3-4.5H24z M32.9,17l0.3-4H24v4H32.9z">
-                        </path>
-                        <path fill="#EEE"
-                            d="M24,30.9v4.2l-7.9-2.6L15.7,27h4l0.2,2.5L24,30.9z M19.1,17H24v-4h-9.1l0.7,12H24v-4h-4.6L19.1,17z">
-                        </path>
+                <!-- Terminal content -->
+                <text
+                  x="45"
+                  y="97"
+                  fill="#BEF264"
+                  font-family="monospace"
+                  font-size="14"
+                  font-weight="700"
+                >
+                  $ whoami
+                </text>
 
-                    </svg>
-                </li>
-                <li class="w-[150px]  h-[170px] relative hover:bottom-2 ho  bg-cyan-300 hover:right-2 shadow-black shadow-[10px_10px_0px]  transition duration-100 border-4 rounded-xl" id="css">
-                    <p class="csstext flex justify-center">CSS</p><svg xmlns="http://www.w3.org/2000/svg" x="0px"
-                        y="0px" width="150" height="130" viewBox="2 0 44 44">
-                        <path fill="#1565C0" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path>
-                        <path fill="#1976D2" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path>
-                        <path fill="#FFF"
-                            d="M33.1 13L24 13 24 17 28.9 17 28.6 21 24 21 24 25 28.4 25 28.1 29.5 24 30.9 24 35.1 31.9 32.5 32.6 21 32.6 21z">
-                        </path>
-                        <path fill="#EEE"
-                            d="M24,13v4h-8.9l-0.3-4H24z M19.4,21l0.2,4H24v-4H19.4z M19.8,27h-4l0.3,5.5l7.9,2.6v-4.2l-4.1-1.4L19.8,27z">
-                        </path>
+                <text
+                  x="45"
+                  y="124"
+                  fill="#F3F4F6"
+                  font-family="monospace"
+                  font-size="14"
+                >
+                  Ayush
+                </text>
 
-                    </svg>
-                </li>
-                <li class="w-[150px]  h-[170px] relative hover:bottom-2 shadow-black shadow-[9px_9px_0px]  bg-yellow-300 hover:right-2 transition duration-100 border-4 rounded-xl" id="css">
-                    <p class="csstext flex justify-center">TAILWIND</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="140" height="140"
-                        viewBox="-5 -4 55 55">
-                        <path fill="#00acc1"
-                            d="M24,9.604c-6.4,0-10.4,3.199-12,9.597c2.4-3.199,5.2-4.398,8.4-3.599 c1.826,0.456,3.131,1.781,4.576,3.247C27.328,21.236,30.051,24,36,24c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.6 c-1.825-0.456-3.13-1.781-4.575-3.247C32.672,12.367,29.948,9.604,24,9.604L24,9.604z M12,24c-6.4,0-10.4,3.199-12,9.598 c2.4-3.199,5.2-4.399,8.4-3.599c1.825,0.457,3.13,1.781,4.575,3.246c2.353,2.388,5.077,5.152,11.025,5.152 c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.599c-1.826-0.456-3.131-1.781-4.576-3.246C20.672,26.764,17.949,24,12,24 L12,24z">
-                        </path>
-                    </svg>
-                </li>
+                <text
+                  x="45"
+                  y="151"
+                  fill="#BEF264"
+                  font-family="monospace"
+                  font-size="14"
+                  font-weight="700"
+                >
+                  $ role
+                </text>
 
-                <li class="w-[150px]  h-[170px]  relative hover:bottom-2 shadow-black  bg-fuchsia-800 shadow-[10px_10px_0px]  hover:right-2 transition duration-100 border-4 rounded-xl" id="js">
-                    <p class="jstext flex justify-center">JAVASCRIPT</p>
-                    <!-- J - modern bold style -->
+                <text
+                  x="45"
+                  y="178"
+                  fill="#D1D5DB"
+                  font-family="monospace"
+                  font-size="14"
+                >
+                  CSE Student &amp; Developer @NIET
+                </text>
 
+                <!-- Status -->
+                <circle cx="50" cy="197" r="5" fill="#6EE7B7" />
+                <text
+                  x="63"
+                  y="202"
+                  fill="#6EE7B7"
+                  font-family="monospace"
+                  font-size="12"
+                >
+                  building the future_
+                </text>
+              </svg>
+              <svg
+                class="w-full min-[965px]:hidden 00px]:max-w-80 min-[950px]:max-w-75 min h-auto text-lime-300"
+                viewBox="20 10 300 280"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <!-- Background stars -->
+                <circle
+                  cx="67"
+                  cy="54"
+                  r="3"
+                  fill="currentColor"
+                  opacity=".45"
+                />
+                <circle
+                  cx="292"
+                  cy="61"
+                  r="3"
+                  fill="currentColor"
+                  opacity=".45"
+                />
+                <circle
+                  cx="315"
+                  cy="205"
+                  r="3"
+                  fill="currentColor"
+                  opacity=".45"
+                />
+                <circle
+                  cx="43"
+                  cy="214"
+                  r="3"
+                  fill="currentColor"
+                  opacity=".45"
+                />
 
+                <!-- Portal shadow -->
+                <path
+                  d="M110 233H250"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  opacity=".25"
+                />
 
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="150" height="130"
-                        viewBox="2 0 44 44">
+                <!-- Outer portal -->
+                <path
+                  d="M180 40L265 89V187L180 236L95 187V89L180 40Z"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linejoin="round"
+                  opacity=".45"
+                />
 
-                        <!-- Shield -->
-                        <path fill="#FBC02D" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z">
-                        </path>
+                <!-- Inner portal -->
+                <path
+                  d="M180 65L242 101V173L180 209L118 173V101L180 65Z"
+                  fill="currentColor"
+                  opacity=".08"
+                />
 
-                        <!-- Right side -->
-                        <path fill="#FDD835" d="M24 8L24 39.9 35.2 36.7 37.7 8z">
-                        </path>
+                <path
+                  d="M180 65L242 101V173L180 209L118 173V101L180 65Z"
+                  stroke="currentColor"
+                  stroke-width="4"
+                  stroke-linejoin="round"
+                />
 
-                        <path fill="#FFFFFF" d="M12,29.004l7,1.942V11h4v26l-11-3.051V29.004z
-       M38.054,22L37,34.25L27,37v-4.601l6.75-1.855l0.25-3.75L27,28V11h12
-       l-0.345,4H31v8L38.054,22z">
-                        </path>
+                <!-- Layered depth lines -->
+                <path
+                  d="M118 101L180 137L242 101M180 137V209"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linejoin="round"
+                  opacity=".65"
+                />
 
+                <!-- Code brackets -->
+                <path
+                  d="M158 121L142 137L158 153M202 121L218 137L202 153"
+                  stroke="currentColor"
+                  stroke-width="5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
 
+                <!-- Central slash -->
+                <path
+                  d="M190 114L170 160"
+                  stroke="currentColor"
+                  stroke-width="5"
+                  stroke-linecap="round"
+                />
 
-
-                    </svg>
-                </li>
-
-<li class="w-[150px]  h-[170px] relative hover:bottom-2 shadow-black shadow-[10px_10px_0px] bg-gray-600 hover:right-2 transition duration-100 border-4 rounded-xl" id="css">
-                    <p class="csstext flex justify-center">REACT</p>
- <svg xmlns="http://www.w3.org/2000/svg" x="10px" y="0px" width="145" height="135" viewBox="0 0 48 48">
-<path fill="#80deea" d="M24,34C11.1,34,1,29.6,1,24c0-5.6,10.1-10,23-10c12.9,0,23,4.4,23,10C47,29.6,36.9,34,24,34z M24,16	c-12.6,0-21,4.1-21,8c0,3.9,8.4,8,21,8s21-4.1,21-8C45,20.1,36.6,16,24,16z"></path><path fill="#80deea" d="M15.1,44.6c-1,0-1.8-0.2-2.6-0.7C7.6,41.1,8.9,30.2,15.3,19l0,0c3-5.2,6.7-9.6,10.3-12.4c3.9-3,7.4-3.9,9.8-2.5	c2.5,1.4,3.4,4.9,2.8,9.8c-0.6,4.6-2.6,10-5.6,15.2c-3,5.2-6.7,9.6-10.3,12.4C19.7,43.5,17.2,44.6,15.1,44.6z M32.9,5.4	c-1.6,0-3.7,0.9-6,2.7c-3.4,2.7-6.9,6.9-9.8,11.9l0,0c-6.3,10.9-6.9,20.3-3.6,22.2c1.7,1,4.5,0.1,7.6-2.3c3.4-2.7,6.9-6.9,9.8-11.9	c2.9-5,4.8-10.1,5.4-14.4c0.5-4-0.1-6.8-1.8-7.8C34,5.6,33.5,5.4,32.9,5.4z"></path><path fill="#80deea" d="M33,44.6c-5,0-12.2-6.1-17.6-15.6C8.9,17.8,7.6,6.9,12.5,4.1l0,0C17.4,1.3,26.2,7.8,32.7,19	c3,5.2,5,10.6,5.6,15.2c0.7,4.9-0.3,8.3-2.8,9.8C34.7,44.4,33.9,44.6,33,44.6z M13.5,5.8c-3.3,1.9-2.7,11.3,3.6,22.2	c6.3,10.9,14.1,16.1,17.4,14.2c1.7-1,2.3-3.8,1.8-7.8c-0.6-4.3-2.5-9.4-5.4-14.4C24.6,9.1,16.8,3.9,13.5,5.8L13.5,5.8z"></path><circle cx="24" cy="24" r="4" fill="#80deea"></circle>
-</svg>
-   
-                </li>
-
-
-                <li id="git" class="w-[150px]  relative hover:bottom-2 shadow-black shadow-[10px_10px_0px] bg-indigo-700 hover:right-2 transition duration-1000 h-[170px] border-4 rounded-xl">
-                    <p CLASS="text-center font-black">GIT</p><img class="mx-auto" width="120px" id="git-svg" src="svg/git-svgrepo-com.svg">
-                </li>
-
-                <li id="vs" class="w-[150px]  h-[170px] border-4  relative hover:bottom-2 shadow-black shadow-[10px_10px_0px] bg-amber-500  hover:right-2 transition duration-100 rounded-xl">
-                    <p CLASS="text-center vscode">VS CODE</p><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                        width="140" height="135" viewBox="0 0 48 48">
-                        <path fill="#29b6f6"
-                            d="M44,11.11v25.78c0,1.27-0.79,2.4-1.98,2.82l-8.82,4.14L34,33V15L33.2,4.15l8.82,4.14 C43.21,8.71,44,9.84,44,11.11z">
-                        </path>
-                        <path fill="#0277bd"
-                            d="M9,33.896L34,15V5.353c0-1.198-1.482-1.758-2.275-0.86L4.658,29.239 c-0.9,0.83-0.849,2.267,0.107,3.032c0,0,1.324,1.232,1.803,1.574C7.304,34.37,8.271,34.43,9,33.896z">
-                        </path>
-                        <path fill="#0288d1"
-                            d="M9,14.104L34,33v9.647c0,1.198-1.482,1.758-2.275,0.86L4.658,18.761 c-0.9-0.83-0.849-2.267,0.107-3.032c0,0,1.324-1.232,1.803-1.574C7.304,13.63,8.271,13.57,9,14.104z">
-                        </path>
-                    </svg>
-
-                </li>
-
-                <li id="vs" class="w-[150px]  relative hover:bottom-2 shadow-black shadow-[9px_9px_0px] bg-white hover:right-2 transition duration-100  h-[170px] border-4 rounded-xl">
-                    <p CLASS="text-center vscode">GITHUB</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 0 25 25" width="140" height="140">
-                        <!-- GitHub logo -->
-                        <path fill="black" d="M12 .297c-6.63 0-12 5.373-12 12
-        0 5.303 3.438 9.8 8.205 11.385
-        .6.113.82-.258.82-.577
-        0-.285-.01-1.04-.015-2.04
-        -3.338.724-4.042-1.61-4.042-1.61
-        -.546-1.387-1.333-1.756-1.333-1.756
-        -1.089-.745.084-.729.084-.729
-        1.205.084 1.838 1.236 1.838 1.236
-        1.07 1.835 2.809 1.305 3.495.998
-        .108-.776.418-1.305.762-1.605
-        -2.665-.3-5.466-1.332-5.466-5.93
-        0-1.31.465-2.38 1.235-3.22
-        -.135-.303-.54-1.523.105-3.176
-        0 0 1.005-.322 3.3 1.23
-        .96-.267 1.98-.399 3-.405
-        1.02.006 2.04.138 3 .405
-        2.28-1.552 3.285-1.23 3.285-1.23
-        .645 1.653.24 2.873.12 3.176
-        .765.84 1.23 1.91 1.23 3.22
-        0 4.61-2.805 5.625-5.475 5.92
-        .435.375.81 1.096.81 2.22
-        0 1.606-.015 2.896-.015 3.286
-        0 .315.21.69.825.57
-        C20.565 22.092 24 17.592 24 12.297
-        c0-6.627-5.373-12-12-12" />
-                    </svg>
-
-                </li>
-            </ul>
-
-
-
-
-
-        </section>
-        <section class="projects bg-red-500 px-6 pt-4 pb-8 w-5/6 mx-auto relative hover:bottom-2 shadow-black shadow-[10px_10px_0px]  hover:right-2 transition duration-1000 rounded-xl  flex flex-col gap-10 " id="projects">
-            <span class="text-3xl">PROJECTS...</span>
-            <ul><li class=""><a href="https://to-do-olive-pi-99.vercel.app/">Todo Task Manager</a></li></ul>
-
-        </section>
-        <section id="contacts" class="flex bg-red-500 px-6 pt-4 pb-8 w-5/6 mx-auto relative hover:bottom-2 shadow-black shadow-[10px_10px_0px]  hover:right-2 transition duration-1000 rounded-xl flex-col gap-10">
-            <h1 class="text-3xl">Let's Connnect...</h1>
-            <p class="con">Have an opportunity, collaboration, or just want to connect? Feel free to reach out</p>
-            <ul class="flex gap-5">
-                <li class=""><a class="p-1 shadow-[4px_4px_0px] relative bg-purple-700 hover:bottom-1  hover:right-1 transition duration-100 border-3" href="mailto:ayushagrawalfzd4321@gmail.com" target="_blank"
-                        style="">Email</a></li>
-                <li class="s"><a class="p-1 font-bold shadow-[4px_4px_0px] bg-amber-500 relative hover:bottom-1  hover:right-1 transition duration-100 shadow-[4px_4px_0px] border-3"
-                        href="https://www.instagram.com/ayush__15_12/" target="_blank">Instagram</a>
-                </li>
-            </ul>
-        </section>
-
+                <!-- Floating node paths -->
+                <path
+                  d="M96 89L70 74M264 89L290 74M96 187L71 205M264 187L289 205"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  opacity=".45"
+                />
+                <circle cx="65" cy="71" r="5" fill="currentColor" />
+                <circle cx="295" cy="71" r="5" fill="currentColor" />
+                <circle cx="66" cy="208" r="5" fill="currentColor" />
+                <circle cx="294" cy="208" r="5" fill="currentColor" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
-    <footer class="mt-10 flex border-t-2 pt-5 flex-col gap-y-7">
-        <div class="footerayu text-center">AYUSH &pointint; AGRAWAL</div>
-        <div class="profiles flex justify-around">
-            <a target="_blank" href="https://github.com/ayushagrawalfzd4321-dot" class="github">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="teal">
-                    <path
-                        d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.85 10.9.57.1.78-.25.78-.55v-2.15c-3.19.69-3.86-1.54-3.86-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.69.08-.69 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.25 3.34.96.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.47.11-3.06 0 0 .97-.31 3.17 1.17a10.96 10.96 0 0 1 5.78 0c2.2-1.48 3.17-1.17 3.17-1.17.62 1.59.23 2.77.11 3.06.73.8 1.18 1.82 1.18 3.07 0 4.41-2.69 5.38-5.25 5.67.41.35.78 1.03.78 2.08v3.08c0 .3.21.66.79.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" />
-                </svg>
-            </a>
-
-            <a href="https://www.instagram.com/ayush__15_12" target="_blank" class="instag">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" fill="teal">
-                    <path
-                        d="M7.75 2C4.57 2 2 4.57 2 7.75v8.5C2 19.43 4.57 22 7.75 22h8.5C19.43 22 22 19.43 22 16.25v-8.5C22 4.57 19.43 2 16.25 2h-8.5zm0 2h8.5A3.75 3.75 0 0 1 20 7.75v8.5A3.75 3.75 0 0 1 16.25 20h-8.5A3.75 3.75 0 0 1 4 16.25v-8.5A3.75 3.75 0 0 1 7.75 4zm8.75 1.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z" />
-                </svg>
-            </a>
-
-            <a href="mailto:ayushagrawalfzd4321@gmail.com" class=" mail-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
-                    stroke="teal" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-                    <path d="M22 7L12 13 2 7"></path>
-                </svg>
-            </a>
-        </div>
-        <div class="profiles flex justify-around">
-            <a href="#aboutme" class="direct border-4 border-teal-600  relative hover:bottom-1  hover:right-1 shadow-black shadow-[6px_6px_0px] transition duration-100 font-black p-2">ABOUT ME</a>
-
-            <a href="#projects" class="direct border-4 border-teal-600  relative hover:bottom-1  hover:right-1 shadow-black shadow-[6px_6px_0px] transition duration-100 font-black p-2">PROJECTS</a>
-
-            <a href="#skills" class="direct border-4 border-teal-600 relative hover:bottom-1  hover:right-1 shadow-black shadow-[6px_6px_0px] transition duration-100 font-black p-2">SKILLS</a>
-
-            <a href="#contacts" class="direct border-4 border-teal-600 relative hover:bottom-1  hover:right-1 transition duration-100 shadow-black shadow-[6px_6px_0px]  font-black p-2">CONNECT</a>
-        </div>
-        <p id="copyright" class="text-center">&copy 2026 Ayush Agrawal. All Rights Reserved.</p>
-
-
-    </footer>
-    <a class="top fixed bg-emerald-400 rounded-full hover:bg-emerald-800 px-2 transition duration-100 text-black font-bold text-5xl right-0 bottom-0" href="#top">&uArr;</a>
-
-
-</body>
-
+  </body>
 </html>
