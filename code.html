@@ -1,0 +1,1406 @@
+<!doctype html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Ayush - CS Student &amp; Developer</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&amp;family=Inter:wght@400;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-variant": "#2d3449",
+              "tertiary-container": "#e3d4ff",
+              "on-error": "#690005",
+              "on-primary-fixed": "#002022",
+              "surface-container": "#171f33",
+              "on-surface-variant": "#b9cacb",
+              primary: "#e1fdff",
+              "surface-container-high": "#222a3d",
+              "surface-dim": "#0b1326",
+              "on-primary": "#00363a",
+              "outline-variant": "#3a494b",
+              "on-tertiary-container": "#7318ff",
+              "surface-bright": "#31394d",
+              "primary-fixed-dim": "#00dbe7",
+              "surface-container-highest": "#2d3449",
+              surface: "#0b1326",
+              "on-secondary-fixed": "#112000",
+              "secondary-fixed": "#a8f928",
+              "inverse-primary": "#00696f",
+              "on-background": "#dae2fd",
+              "surface-tint": "#00dbe7",
+              "secondary-container": "#95e400",
+              "on-error-container": "#ffdad6",
+              "secondary-fixed-dim": "#8fdb00",
+              "tertiary-fixed-dim": "#d1bcff",
+              "surface-container-low": "#131b2e",
+              "on-primary-fixed-variant": "#004f54",
+              "error-container": "#93000a",
+              "on-secondary-fixed-variant": "#314f00",
+              "on-tertiary-fixed-variant": "#5700c9",
+              "on-surface": "#dae2fd",
+              error: "#ffb4ab",
+              "surface-container-lowest": "#060e20",
+              "inverse-on-surface": "#283044",
+              tertiary: "#fcf5ff",
+              "on-tertiary": "#3c0090",
+              secondary: "#bcff5f",
+              outline: "#849495",
+              background: "#0b1326",
+              "primary-fixed": "#74f5ff",
+              "on-primary-container": "#006a71",
+              "on-secondary-container": "#3d6200",
+              "primary-container": "#00f2ff",
+              "tertiary-fixed": "#e9ddff",
+              "inverse-surface": "#dae2fd",
+              "on-tertiary-fixed": "#23005b",
+              "on-secondary": "#203600",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              "margin-mobile": "20px",
+              unit: "4px",
+              "card-padding": "32px",
+              "margin-desktop": "64px",
+              gutter: "24px",
+            },
+            fontFamily: {
+              "code-sm": ["JetBrains Mono"],
+              "label-caps": ["JetBrains Mono"],
+              "headline-xl": ["Inter"],
+              "body-md": ["Inter"],
+              "headline-lg": ["Inter"],
+              "headline-lg-mobile": ["Inter"],
+            },
+            fontSize: {
+              "code-sm": ["14px", { lineHeight: "1.5", fontWeight: "500" }],
+              "label-caps": [
+                "12px",
+                {
+                  lineHeight: "1.0",
+                  letterSpacing: "0.1em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-xl": [
+                "48px",
+                {
+                  lineHeight: "1.1",
+                  letterSpacing: "-0.04em",
+                  fontWeight: "800",
+                },
+              ],
+              "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+              "headline-lg": [
+                "32px",
+                {
+                  lineHeight: "1.2",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-lg-mobile": [
+                "24px",
+                { lineHeight: "1.2", fontWeight: "700" },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        background-color: theme("colors.background");
+        color: theme("colors.on-background");
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+      }
+
+      /* Scanline Overlay */
+      .scanlines {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0),
+          rgba(255, 255, 255, 0) 50%,
+          rgba(0, 0, 0, 0.05) 50%,
+          rgba(0, 0, 0, 0.05)
+        );
+        background-size: 100% 4px;
+        pointer-events: none;
+        z-index: 9998;
+        opacity: 0.3;
+      }
+
+      /* Glassmorphism & Hardware Textures */
+      .glass-panel {
+        background: rgba(23, 31, 51, 0.4); /* surface-container with opacity */
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 20px 40px -10px rgba(6, 14, 32, 0.7);
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hardware-texture {
+        background-image: repeating-linear-gradient(
+          45deg,
+          rgba(255, 255, 255, 0.01) 0px,
+          rgba(255, 255, 255, 0.01) 2px,
+          transparent 2px,
+          transparent 4px
+        );
+      }
+
+      .glass-panel:hover {
+        transform: scale(1.02);
+        box-shadow: 0 30px 60px -15px rgba(6, 14, 32, 0.9);
+      }
+
+      /* Shimmer Effect on Hover */
+      .shimmer-hover {
+        position: relative;
+      }
+
+      .shimmer-hover::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(
+          to right,
+          transparent,
+          rgba(255, 255, 255, 0.05),
+          transparent
+        );
+        transform: skewX(-20deg);
+        transition: none;
+        pointer-events: none;
+        z-index: 10;
+      }
+
+      .shimmer-hover:hover::before {
+        left: 200%;
+        transition: left 0.7s ease-in-out;
+      }
+
+      /* Interactions */
+      .magnetic {
+        transition:
+          transform 0.2s cubic-bezier(0.25, 1, 0.5, 1),
+          box-shadow 0.3s ease;
+        display: inline-block;
+      }
+
+      .magnetic-primary:hover {
+        box-shadow: 0 0 20px rgba(0, 242, 255, 0.4);
+      }
+
+      .magnetic-secondary:hover {
+        box-shadow: 0 0 20px rgba(188, 255, 95, 0.4);
+      }
+
+      .hover-glow:hover {
+        box-shadow: 0 0 30px rgba(0, 242, 255, 0.15);
+        border-color: rgba(0, 242, 255, 0.3);
+      }
+
+      .cyber-glow {
+        transition: all 0.3s ease;
+      }
+
+      .cyber-glow:hover {
+        color: theme("colors.secondary");
+        text-shadow:
+          0 0 10px rgba(188, 255, 95, 0.8),
+          0 0 20px rgba(188, 255, 95, 0.4);
+        transform: scale(1.1);
+      }
+
+      /* Animations */
+      @keyframes pulse-ring {
+        0% {
+          transform: scale(0.8);
+          opacity: 0.5;
+        }
+        100% {
+          transform: scale(2);
+          opacity: 0;
+        }
+      }
+
+      .status-dot-pulse::after {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        border-radius: 50%;
+        background-color: theme("colors.secondary");
+        animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+      }
+
+      @keyframes fade-in-up {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-fade-in-up {
+        opacity: 0;
+        animation: fade-in-up 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+      }
+
+      .delay-100 {
+        animation-delay: 100ms;
+      }
+      .delay-200 {
+        animation-delay: 200ms;
+      }
+      .delay-300 {
+        animation-delay: 300ms;
+      }
+
+      .reveal-on-scroll {
+        opacity: 0;
+        transform: translateY(30px);
+        transition:
+          opacity 0.8s ease,
+          transform 0.8s ease;
+      }
+
+      .reveal-on-scroll.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Custom Cursor */
+      #cursor {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: rgba(0, 242, 255, 0.5);
+        mix-blend-mode: screen;
+        pointer-events: none;
+        z-index: 9999;
+        transform: translate(-50%, -50%);
+        transition:
+          width 0.2s,
+          height 0.2s,
+          background-color 0.2s;
+      }
+      #cursor.hovering {
+        width: 40px;
+        height: 40px;
+        background: rgba(188, 255, 95, 0.4);
+      }
+
+      /* Utilities */
+      .text-gradient-cyan {
+        background: linear-gradient(
+          to right,
+          theme("colors.primary"),
+          theme("colors.primary-container")
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .grid-bg {
+        background-image:
+          linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0.02) 1px,
+            transparent 1px
+          ),
+          linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.02) 1px,
+            transparent 1px
+          );
+        background-size: 40px 40px;
+      }
+
+      /* Navigation Indicator */
+      .nav-link {
+        position: relative;
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background-color: theme("colors.primary");
+        transition:
+          width 0.3s ease,
+          left 0.3s ease;
+      }
+
+      .nav-link:hover::after,
+      .nav-link.active::after {
+        width: 100%;
+        left: 0;
+      }
+
+      /* Typing Effect */
+      .typing-container {
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: 2px solid theme("colors.secondary");
+        animation: blink-cursor 0.75s step-end infinite;
+      }
+
+      @keyframes blink-cursor {
+        from,
+        to {
+          border-color: transparent;
+        }
+        50% {
+          border-color: theme("colors.secondary");
+        }
+      }
+
+      /* Circular Progress Rings */
+      .progress-ring__circle {
+        transition: stroke-dashoffset 0.35s;
+        transform: rotate(-90deg);
+        transform-origin: 50% 50%;
+      }
+
+      /* Blueprint Hover */
+      .blueprint-card .blueprint-details {
+        opacity: 0;
+        transform: translateY(10px);
+        transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+      }
+      .blueprint-card:hover .blueprint-details {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .blueprint-scanline {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 10px;
+        background: linear-gradient(
+          to bottom,
+          transparent,
+          rgba(0, 242, 255, 0.5),
+          transparent
+        );
+        opacity: 0;
+        transform: translateY(-100%);
+        pointer-events: none;
+        z-index: 20;
+      }
+      .blueprint-card:hover .blueprint-scanline {
+        animation: scanline-sweep 2s linear infinite;
+        opacity: 1;
+      }
+      @keyframes scanline-sweep {
+        0% {
+          transform: translateY(-100%);
+        }
+        100% {
+          transform: translateY(1000%);
+        }
+      }
+
+      /* Accessibility: Prefers Reduced Motion */
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="relative min-h-screen text-on-background selection:bg-primary-container selection:text-on-primary-container"
+    >
+    <!-- Interactive Scripts -->
+    <script src="./script.js"></script>
+    <div class="scanlines"></div>
+    <!-- Fixed Shader Background -->
+    <div class="fixed inset-0 z-[-1] pointer-events-none opacity-40">
+      <div class="absolute inset-0 bg-background/60 grid-bg"></div>
+    </div>
+    <!-- Custom Cursor -->
+    <div
+      class="hidden md:block"
+      id="cursor"
+      style="left: 1206px; top: 3902px"
+    ></div>
+    <!-- Top Navigation (AYUSH_OS v1.0) -->
+    <nav
+      class="fixed top-0 w-full bg-surface/40 backdrop-blur-md shadow-2xl shadow-surface-dim/50 border-b border-white/10 z-50 transition-all duration-300 ease-out hover:scale-[1.02]"
+    >
+      <div class="flex justify-between items-center px-margin-desktop py-4">
+        <div
+          class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary flex items-center gap-2"
+        >
+          <span class="material-symbols-outlined text-primary animate-pulse"
+            >memory</span
+          >
+          AYUSH<span class="text-secondary font-code-sm opacity-70">[</span
+          ><span class="font-code-sm tracking-tighter">OS</span
+          ><span class="text-secondary font-code-sm opacity-70">]</span>
+          <span
+            class="ml-2 px-1.5 py-0.5 bg-primary/10 border border-primary/20 rounded text-[10px] font-code-sm text-secondary tracking-widest"
+            >v1.0</span
+          >
+        </div>
+        <div class="hidden md:flex gap-8">
+          <a
+            class="nav-link text-on-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps hover:bg-primary/10 hover:shadow-[0_0_15px_rgba(0,219,231,0.3)] px-3 py-2 rounded"
+            href="#projects"
+            >Projects</a
+          >
+          <a
+            class="nav-link text-on-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps hover:bg-primary/10 hover:shadow-[0_0_15px_rgba(0,219,231,0.3)] px-3 py-2 rounded"
+            href="#stack"
+            >Stack</a
+          >
+          <a
+            class="nav-link text-on-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps hover:bg-primary/10 hover:shadow-[0_0_15px_rgba(0,219,231,0.3)] px-3 py-2 rounded"
+            href="#terminal"
+            >Terminal</a
+          >
+          <a
+            class="nav-link text-on-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps hover:bg-primary/10 hover:shadow-[0_0_15px_rgba(0,219,231,0.3)] px-3 py-2 rounded"
+            href="#logs"
+            >Logs</a
+          >
+          <a
+            class="nav-link text-on-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps hover:bg-primary/10 hover:shadow-[0_0_15px_rgba(0,219,231,0.3)] px-3 py-2 rounded"
+            href="#contact"
+            >Contact</a
+          >
+        </div>
+        <div class="hidden md:flex items-center gap-2">
+          <span class="relative flex h-3 w-3">
+            <span
+              class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"
+            ></span>
+            <span
+              class="relative inline-flex rounded-full h-3 w-3 bg-secondary status-dot-pulse"
+            ></span>
+          </span>
+          <span class="font-label-caps text-label-caps text-secondary"
+            >System Status: Active</span
+          >
+        </div>
+      </div>
+    </nav>
+    <!-- Side Navigation (AYUSH) - Hidden on Mobile -->
+    <aside
+      class="hidden md:flex flex-col gap-unit p-4 z-40 fixed left-6 top-1/2 -translate-y-1/2 rounded-xl bg-surface-container/40 backdrop-blur-xl border border-white/10 shadow-xl shadow-black/40 transition-transform duration-200 animate-fade-in-up hardware-texture delay-100"
+    >
+      <div class="mb-6 text-center">
+        <div class="font-label-caps text-label-caps text-primary">AYUSH</div>
+        <div class="font-code-sm text-code-sm text-outline text-[10px]">
+          CS_ENGINEER
+        </div>
+      </div>
+      <a
+        class="rounded-lg p-3 flex justify-center items-center hover:scale-110 hover:shadow-[0_0_20px_rgba(188,255,95,0.4)] transition-all group cyber-glow text-on-surface-variant"
+        href="#home"
+        title="Home"
+      >
+        <span
+          class="material-symbols-outlined"
+          style="font-variation-settings: &quot;FILL&quot; 1"
+          >home</span
+        >
+      </a>
+      <a
+        class="text-on-surface-variant p-3 flex justify-center items-center transition-all group cyber-glow"
+        href="#projects"
+        title="Projects"
+      >
+        <span class="material-symbols-outlined">grid_view</span>
+      </a>
+      <a
+        class="text-on-surface-variant p-3 flex justify-center items-center transition-all group cyber-glow"
+        href="#stack"
+        title="Stack"
+      >
+        <span class="material-symbols-outlined">layers</span>
+      </a>
+      <a
+        class="text-on-surface-variant p-3 flex justify-center items-center transition-all group cyber-glow"
+        href="#terminal"
+        title="Terminal"
+      >
+        <span class="material-symbols-outlined">terminal</span>
+      </a>
+      <a
+        class="text-on-surface-variant p-3 flex justify-center items-center transition-all group cyber-glow"
+        href="#logs"
+        title="Logs"
+      >
+        <span class="material-symbols-outlined">timeline</span>
+      </a>
+      <a
+        class="text-on-surface-variant p-3 flex justify-center items-center transition-all group cyber-glow"
+        href="#contact"
+        title="Contact"
+        ><span class="material-symbols-outlined">person</span></a
+      >
+    </aside>
+    <main
+      class="pt-32 pb-24 px-margin-mobile md:px-margin-desktop md:pl-[120px] max-w-7xl mx-auto space-y-32"
+    >
+      <!-- System Diagnostics Module -->
+      <section class="grid grid-cols-1 md:grid-cols-3 gap-6" id="diagnostics">
+        <div
+          class="glass-panel hardware-texture shimmer-hover p-6 rounded-xl flex items-center gap-4 animate-fade-in-up delay-100"
+        >
+          <div class="relative w-16 h-16">
+            <svg
+              width="70"
+              height="80"
+              viewBox="0 20 180 180"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="90"
+                cy="90"
+                r="70"
+                fill="none"
+                stroke="#000000"
+                stroke-width="14"
+              />
+              <circle
+                cx="90"
+                cy="90"
+                r="70"
+                fill="none"
+                stroke="#BEF264"
+                stroke-width="14"
+                stroke-linecap="butt"
+                stroke-dasharray="439.82"
+                stroke-dashoffset="8.80"
+                transform="rotate(-90 90 90)"
+              />
+              <text
+                x="90"
+                y="98"
+                text-anchor="middle"
+                font-family="monospace"
+                font-size="38"
+                font-weight="700"
+                fill="#BEF264"
+              >
+                98%
+              </text>
+            </svg>
+          </div>
+          <div>
+            <div class="font-label-caps text-primary">Curiosity Engine</div>
+            <div class="text-xs text-on-surface-variant mt-1">
+              Active Status
+            </div>
+          </div>
+        </div>
+        <div
+          class="glass-panel hardware-texture shimmer-hover p-6 rounded-xl flex items-center gap-4 animate-fade-in-up delay-200"
+        >
+          <div class="relative w-16 h-16 flex items-center justify-center">
+            <span
+              class="material-symbols-outlined text-primary text-4xl animate-pulse"
+              >waves</span
+            >
+          </div>
+          <div>
+            <div class="font-label-caps text-secondary">Deep Work Flow</div>
+            <div class="text-xs text-on-surface-variant mt-1">
+              Peak Performance
+            </div>
+          </div>
+        </div>
+        <div
+          class="glass-panel hardware-texture shimmer-hover p-6 rounded-xl flex items-center gap-4 animate-fade-in-up delay-300"
+        >
+          <div class="relative w-16 h-16 flex items-center justify-center">
+            <span class="material-symbols-outlined text-error text-4xl"
+              >hub</span
+            >
+          </div>
+          <div>
+            <div class="font-label-caps text-error">Neural Network</div>
+            <div class="text-xs text-on-surface-variant mt-1">
+              Learning Node: Active
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Hero Module -->
+      <section
+        class="relative flex flex-col justify-center min-h-[500px] reveal-on-scroll is-visible"
+        id="home"
+      >
+        <div
+          class="glass-panel hardware-texture shimmer-hover rounded-xl p-card-padding relative overflow-hidden animate-fade-in-up delay-100"
+        >
+          <!-- Interactive Idea -> Code -> Product (CSS abstraction) -->
+          <div
+            class="absolute top-8 right-8 opacity-20 hidden lg:flex items-center gap-4 text-primary"
+          >
+            <span class="material-symbols-outlined text-4xl animate-pulse"
+              >lightbulb</span
+            >
+            <div class="h-[2px] w-12 bg-primary/50 relative overflow-hidden">
+              <div
+                class="absolute inset-0 bg-primary animate-[translate_2s_linear_infinite]"
+                style="width: 20%"
+              ></div>
+            </div>
+            <span class="material-symbols-outlined text-4xl">code</span>
+            <div class="h-[2px] w-12 bg-primary/50 relative overflow-hidden">
+              <div
+                class="absolute inset-0 bg-primary animate-[translate_2s_linear_infinite]"
+                style="width: 20%; animation-delay: 1s"
+              ></div>
+            </div>
+            <span class="material-symbols-outlined text-4xl"
+              >rocket_launch</span
+            >
+          </div>
+          <div
+            class="font-label-caps text-label-caps text-secondary mb-4 flex items-center gap-2"
+          >
+            <div class="w-2 h-2 rounded-full bg-secondary relative"></div>
+            <span class="typing-container" id="typewriter"
+              >SYS.INIT // HELLO WORLDSYS.INIT // HELLO WORLD</span
+            >
+          </div>
+          <h1
+            class="font-headline-xl text-headline-xl mb-6 max-w-3xl leading-tight"
+          >
+            Learning through Building. <br />
+            <span class="text-gradient-cyan">Architecting the Future.</span>
+          </h1>
+          <p
+            class="font-body-md text-body-md text-on-surface-variant mb-12 max-w-2xl"
+          >
+            CS Student @ NIET. Turning complex problems into elegant,
+            high-performance digital solutions. Currently exploring the
+            intersection of distributed systems and intuitive user interfaces.
+          </p>
+          <div class="flex flex-wrap gap-6">
+            <a
+              class="magnetic magnetic-primary inline-flex items-center gap-2 bg-primary-container text-on-primary-container px-8 py-4 rounded-lg font-code-sm text-code uppercase tracking-wider font-bold"
+              href="https://github.com/ayushagrawalfzd4321-dot"
+              style="transform: translate(0px, 0px)"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="35"
+                height="35"
+                viewBox="0 0 30 30"
+              >
+                <path
+                  d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z"
+                ></path>
+              </svg>
+              &ThinSpace; <span class="text-black font-bold">GITHUB</span></a
+            >
+            <a
+              class="magnetic magnetic-secondary inline-flex items-center gap-2 border bg-white border-white/20 bg-surface/30 hover:bg-surface/50 text-on-surface px-8 py-4 rounded-lg font-code-sm text-code  uppercase tracking-wider transition-colors"
+              href="https://www.linkedin.com/in/ayush-agrawal-4124373ab/"
+              style="transform: translate(0px, 0px)"
+              target="_blank"
+            >
+              <!-- <span class="material-symbols-outlined text-sm">code</span> -->
+                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 30 30">
+              <path fill="#0A66C2"
+                d="M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h18c1.105,0,2-0.895,2-2V6C26,4.895,25.105,4,24,4z M10.954,22h-2.95 v-9.492h2.95V22z M9.449,11.151c-0.951,0-1.72-0.771-1.72-1.72c0-0.949,0.77-1.719,1.72-1.719c0.948,0,1.719,0.771,1.719,1.719 C11.168,10.38,10.397,11.151,9.449,11.151z M22.004,22h-2.948v-4.616c0-1.101-0.02-2.517-1.533-2.517 c-1.535,0-1.771,1.199-1.771,2.437V22h-2.948v-9.492h2.83v1.297h0.04c0.394-0.746,1.356-1.533,2.791-1.533 c2.987,0,3.539,1.966,3.539,4.522V22z">
+              </path>
+            </svg>
+            &ThinSpace;
+              <span class="text-black font-bold">LINKEDIN</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- Projects Section -->
+      <section
+        class="space-y-8 reveal-on-scroll scroll-mt-32 is-visible"
+        id="projects"
+      >
+        <div class="flex items-center gap-4 mb-8">
+          <span class="material-symbols-outlined text-3xl text-primary"
+            >grid_view</span
+          >
+          <h2 class="font-headline-lg text-headline-lg">Active Projects</h2>
+          <div class="flex-grow h-px bg-white/10 ml-4"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div
+            class="md:col-span-2 glass-panel hardware-texture p-card-padding rounded-xl flex flex-col items-center justify-center text-center border border-white/10 animate-fade-in-up delay-100 min-h-[300px]"
+          >
+            <span
+              class="material-symbols-outlined text-6xl text-primary/20 mb-4 animate-pulse"
+              >settings_input_component</span
+            >
+            <h3 class="font-headline-lg-mobile text-primary mb-2">
+              MODULE_PENDING: Future Project
+            </h3>
+            <p class="font-body-md text-on-surface-variant">
+              Initializing System Logic... New architecture in development.
+            </p>
+          </div>
+          <div
+            class="glass-panel hardware-texture p-6 rounded-xl flex flex-col items-center justify-center text-center border border-white/10 animate-fade-in-up delay-200"
+          >
+            <span
+              class="material-symbols-outlined text-4xl text-secondary/20 mb-2"
+              >database</span
+            >
+            <h3 class="font-label-caps text-secondary">SLOT_VACANT</h3>
+            <p class="text-xs text-on-surface-variant">
+              Awaiting new repository initialization.
+            </p>
+          </div>
+          <div
+            class="glass-panel hardware-texture p-6 rounded-xl flex flex-col items-center justify-center text-center border border-white/10 md:col-span-3 animate-fade-in-up delay-300"
+          >
+            <div class="flex items-center gap-4">
+              <span
+                class="material-symbols-outlined text-primary/20 text-3xl animate-spin"
+                >sync</span
+              >
+              <div class="text-left">
+                <h3 class="font-code-sm font-bold text-primary">
+                  SYSTEM_SCAN_IN_PROGRESS
+                </h3>
+                <p class="text-xs text-on-surface-variant">
+                  Searching for compatible project modules...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Stack Section -->
+      <section
+        class="space-y-8 reveal-on-scroll scroll-mt-32 is-visible"
+        id="stack"
+      >
+        <div class="flex items-center gap-4 mb-8">
+          <span class="material-symbols-outlined text-3xl text-secondary"
+            >layers</span
+          >
+          <h2 class="font-headline-lg text-headline-lg">Tech Ecosystem</h2>
+          <div class="flex-grow h-px bg-white/10 ml-4"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Frontend -->
+          <div
+            class="glass-panel hardware-texture shimmer-hover p-card-padding rounded-xl animate-fade-in-up delay-100"
+          >
+            <h3
+              class="font-label-caps text-primary mb-6 flex items-center gap-2"
+            >
+              <span class="material-symbols-outlined text-sm"
+                >desktop_windows</span
+              >
+              Frontend
+            </h3>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between text-sm mb-1">
+                  <span class="">React / Next.js</span>
+                  <span class="text-primary font-code-sm">90%</span>
+                </div>
+                <div class="w-full bg-surface-container rounded-full h-1.5">
+                  <div
+                    class="bg-primary h-1.5 rounded-full"
+                    style="width: 90%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm mb-1">
+                  <span class="">Tailwind CSS</span>
+                  <span class="text-primary font-code-sm">85%</span>
+                </div>
+                <div class="w-full bg-surface-container rounded-full h-1.5">
+                  <div
+                    class="bg-primary h-1.5 rounded-full"
+                    style="width: 85%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm mb-1">
+                  <span class="">TypeScript</span>
+                  <span class="text-primary font-code-sm">80%</span>
+                </div>
+                <div class="w-full bg-surface-container rounded-full h-1.5">
+                  <div
+                    class="bg-primary h-1.5 rounded-full"
+                    style="width: 80%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Backend -->
+          <div
+            class="glass-panel hardware-texture shimmer-hover p-card-padding rounded-xl animate-fade-in-up delay-200"
+          >
+            <h3
+              class="font-label-caps text-secondary mb-6 flex items-center gap-2"
+            >
+              <span class="material-symbols-outlined text-sm">dns</span>
+              Backend
+            </h3>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between text-sm mb-1">
+                  <span class="">Node.js / Express</span>
+                  <span class="text-secondary font-code-sm">85%</span>
+                </div>
+                <div class="w-full bg-surface-container rounded-full h-1.5">
+                  <div
+                    class="bg-secondary h-1.5 rounded-full"
+                    style="width: 85%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm mb-1">
+                  <span class="">Java </span>
+                  <span class="text-secondary font-code-sm">90%</span>
+                </div>
+                <div class="w-full bg-surface-container rounded-full h-1.5">
+                  <div
+                    class="bg-secondary h-1.5 rounded-full"
+                    style="width: 70%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm mb-1">
+                  <span class="">MongoDB</span>
+                  <span class="text-secondary font-code-sm">75%</span>
+                </div>
+                <div class="w-full bg-surface-container rounded-full h-1.5">
+                  <div
+                    class="bg-secondary h-1.5 rounded-full"
+                    style="width: 75%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Tools -->
+          <div
+            class="glass-panel hardware-texture shimmer-hover p-card-padding rounded-xl animate-fade-in-up delay-300"
+          >
+            <h3
+              class="font-label-caps text-primary-fixed mb-6 flex items-center gap-2"
+            >
+              <span class="material-symbols-outlined text-sm">build</span>
+              Tools &amp; Sys
+            </h3>
+            <div class="flex flex-wrap gap-3">
+              <span
+                class="px-3 py-1 bg-surface-container border border-white/10 rounded-full text-sm hover:border-primary hover:text-primary transition-colors cursor-default"
+                >Git / GitHub</span
+              >
+             
+              <span
+                class="px-3 py-1 bg-surface-container border border-white/10 rounded-full text-sm hover:border-primary hover:text-primary transition-colors cursor-default"
+                >Linux</span
+              >
+             
+              <span
+                class="px-3 py-1 bg-surface-container border border-white/10 rounded-full text-sm hover:border-primary hover:text-primary transition-colors cursor-default"
+                >Figma</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Terminal Section (Journey) -->
+      <section
+        class="space-y-8 reveal-on-scroll scroll-mt-32 is-visible"
+        id="terminal"
+      >
+        <div class="flex items-center gap-4 mb-8">
+          <span class="material-symbols-outlined text-3xl text-primary"
+            >terminal</span
+          >
+          <h2 class="font-headline-lg text-headline-lg">
+            System.Log // Journey
+          </h2>
+          <div class="flex-grow h-px bg-white/10 ml-4"></div>
+        </div>
+        <div
+          class="glass-panel hardware-texture shimmer-hover p-8 rounded-xl font-code-sm text-sm border border-primary/20 shadow-[0_0_15px_rgba(0,242,255,0.1)]"
+        >
+          <div
+            class="flex justify-between items-center mb-6 border-b border-white/10 pb-4"
+          >
+            <div class="flex items-center gap-2 text-on-surface-variant">
+              <div class="flex gap-2">
+                <div class="w-3 h-3 rounded-full bg-error"></div>
+                <div class="w-3 h-3 rounded-full bg-secondary"></div>
+                <div class="w-3 h-3 rounded-full bg-primary"></div>
+              </div>
+              <span class="ml-4"
+                >ayush@dev-station: ~/journey $ cat timeline.log</span
+              >
+            </div>
+            <button
+              class="px-3 py-1 text-xs border border-primary/30 text-primary rounded hover:bg-primary/10 transition-colors flex items-center gap-1 group shadow-[0_0_10px_rgba(0,242,255,0.1)] hover:shadow-[0_0_15px_rgba(0,242,255,0.3)]"
+            >
+              <span class="material-symbols-outlined text-[14px]">code</span>
+              View Source
+            </button>
+          </div>
+          <div
+            class="space-y-6 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-white/20 before:to-transparent"
+          >
+            <!-- Timeline Item 1 -->
+            <div
+              class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active reveal-on-scroll is-visible"
+            >
+              <div
+                class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-surface bg-surface-bright text-primary group-hover:bg-primary group-hover:text-surface-dim shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-[0_0_10px_rgba(0,242,255,0.2)] transition-colors z-10"
+              >
+                <span class="material-symbols-outlined text-sm"
+                  >rocket_launch</span
+                >
+              </div>
+              <div
+                class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 rounded bg-surface-container/30 border border-white/5 hover:border-primary/30 transition-colors"
+              >
+                <div class="text-primary mb-1">Present</div>
+                <div class="text-white font-bold mb-2">
+                  Exploring AI/ML &amp; Distributed Systems
+                </div>
+                <div class="text-on-surface-variant text-xs">
+                  Deep diving into neural networks and architecting scalable
+                  backend solutions.
+                </div>
+              </div>
+            </div>
+            <!-- Timeline Item 2 -->
+            <div
+              class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group reveal-on-scroll is-visible"
+            >
+              <div
+                class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-surface bg-surface-container text-secondary shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10"
+              >
+                <span class="material-symbols-outlined text-sm"
+                  >developer_mode</span
+                >
+              </div>
+              <div
+                class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 rounded bg-surface-container/30 border border-white/5"
+              >
+                <div class="text-secondary mb-1">2026-AUG</div>
+                <div class="text-white font-bold mb-2">
+                  Full-Stack Development
+                </div>
+                <div class="text-on-surface-variant text-xs">
+                  Mastered React, Node.js, and database design. Built first
+                  end-to-end applications.
+                </div>
+              </div>
+            </div>
+            <!-- Timeline Item 3 -->
+            <div
+              class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group reveal-on-scroll is-visible"
+            >
+              <div
+                class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-surface bg-surface-container text-outline shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10"
+              >
+                <span class="material-symbols-outlined text-sm">terminal</span>
+              </div>
+              <div
+                class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 rounded bg-surface-container/30 border border-white/5"
+              >
+                <div class="text-outline mb-1">2026 -JUNE</div>
+                <div class="text-white font-bold mb-2">Programming Init</div>
+                <div class="text-on-surface-variant text-xs">
+                  Started journey with Java and Python. Learning core algorithms
+                  and data structures.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-8 text-primary flex items-center">
+            ayush@dev-station: ~/journey $
+            <span
+              class="typing-container border-r-2 border-primary inline-block w-2 h-4 align-middle ml-2 animate-pulse"
+              id="terminal-typing"
+              >tail -f server.logtail -f server.log</span
+            >
+          </div>
+        </div>
+      </section>
+      <!-- Logs Section -->
+      <!-- <section
+        class="space-y-8 reveal-on-scroll scroll-mt-32 is-visible"
+        id="logs"
+      >
+        <div class="flex items-center gap-4 mb-8">
+          <span class="material-symbols-outlined text-3xl text-secondary"
+            >timeline</span
+          >
+          <h2 class="font-headline-lg text-headline-lg">Activity Logs</h2>
+          <div class="flex-grow h-px bg-white/10 ml-4"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div
+            class="glass-panel hardware-texture shimmer-hover p-card-padding rounded-xl animate-fade-in-up delay-100"
+          >
+            <h3
+              class="font-label-caps text-primary mb-6 flex items-center gap-2"
+            >
+              <span class="material-symbols-outlined text-sm"
+                >emoji_events</span
+              >
+              Recent Achievements
+            </h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <span
+                  class="material-symbols-outlined text-secondary mt-1 text-sm"
+                  >done</span
+                >
+                <div>
+                  <div class="font-bold">Hackathon Winner</div>
+                  <div class="text-sm text-on-surface-variant">
+                    1st place at Campus Buildathon 2023 for CampusHub MVP.
+                  </div>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span
+                  class="material-symbols-outlined text-secondary mt-1 text-sm"
+                  >done</span
+                >
+                <div>
+                  <div class="font-bold">Open Source Contribution</div>
+                  <div class="text-sm text-on-surface-variant">
+                    Merged PRs in major React ecosystem libraries.
+                  </div>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span
+                  class="material-symbols-outlined text-secondary mt-1 text-sm"
+                  >done</span
+                >
+                <div>
+                  <div class="font-bold">AWS Certified</div>
+                  <div class="text-sm text-on-surface-variant">
+                    Obtained AWS Solutions Architect Associate certification.
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="glass-panel hardware-texture shimmer-hover p-card-padding rounded-xl flex flex-col justify-center items-center animate-fade-in-up delay-200"
+          >
+            <h3
+              class="font-label-caps text-secondary mb-6 self-start w-full flex items-center gap-2"
+            >
+              <span class="material-symbols-outlined text-sm">commit</span>
+              Commit Activity (Mock)
+            </h3> -->
+            <!-- Placeholder for GitHub Activity Graph -->
+            <!-- <div
+              class="w-full bg-surface-container/50 rounded-lg p-4 border border-white/5 opacity-70"
+            >
+              <div class="grid grid-cols-12 gap-1 mb-2"> -->
+                <!-- Generating mock cells for visualization -->
+                <!-- <div class="h-3 w-3 rounded-sm bg-surface"></div>
+                <div class="h-3 w-3 rounded-sm bg-primary/20"></div>
+                <div class="h-3 w-3 rounded-sm bg-primary/40"></div>
+                <div class="h-3 w-3 rounded-sm bg-surface"></div>
+                <div class="h-3 w-3 rounded-sm bg-primary/60"></div>
+                <div class="h-3 w-3 rounded-sm bg-primary/80"></div>
+                <div class="h-3 w-3 rounded-sm bg-primary"></div>
+                <div class="h-3 w-3 rounded-sm bg-surface"></div>
+                <div class="h-3 w-3 rounded-sm bg-primary/20"></div>
+                <div class="h-3 w-3 rounded-sm bg-primary/40"></div>
+                <div class="h-3 w-3 rounded-sm bg-primary/60"></div>
+                <div class="h-3 w-3 rounded-sm bg-primary/20"></div>
+                <div class="h-3 w-3 rounded-sm bg-primary/40"></div>
+                <div class="h-3 w-3 rounded-sm bg-surface"></div>
+                <div class="h-3 w-3 rounded-sm bg-primary/80"></div>
+                <div class="h-3 w-3 rounded-sm bg-primary/60"></div>
+                <div class="h-3 w-3 rounded-sm bg-primary/20"></div>
+                <div class="h-3 w-3 rounded-sm bg-surface"></div>
+                <div class="h-3 w-3 rounded-sm bg-primary/40"></div>
+                <div class="h-3 w-3 rounded-sm bg-primary"></div>
+                <div class="h-3 w-3 rounded-sm bg-primary/80"></div>
+                <div class="h-3 w-3 rounded-sm bg-surface"></div>
+                <div class="h-3 w-3 rounded-sm bg-primary/40"></div>
+                <div class="h-3 w-3 rounded-sm bg-primary/60"></div>
+              </div>
+              <div class="text-xs text-on-surface-variant text-right">
+                342 commits in the last year
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <!-- Roadmap Section -->
+      <!-- <section class="space-y-8 reveal-on-scroll scroll-mt-32 mb-24 is-visible" id="roadmap">
+<div class="flex items-center gap-4 mb-8">
+<span class="material-symbols-outlined text-3xl text-primary">view_kanban</span>
+<h2 class="font-headline-lg text-headline-lg">System.Backlog // Roadmap</h2>
+<div class="flex-grow h-px bg-white/10 ml-4"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="glass-panel hardware-texture p-6 rounded-xl border border-white/5 animate-fade-in-up delay-100">
+<h3 class="font-label-caps text-on-surface-variant mb-4 flex items-center gap-2 border-b border-white/10 pb-2">
+<span class="material-symbols-outlined text-sm">schedule</span> To Do
+            </h3>
+<div class="space-y-3">
+<div class="bg-surface-container/30 p-3 rounded border border-white/5 text-sm hover:border-primary/30 transition-colors">Implement OAuth2 for CampusHub</div>
+<div class="bg-surface-container/30 p-3 rounded border border-white/5 text-sm hover:border-primary/30 transition-colors">Learn Go for Microservices</div>
+<div class="bg-surface-container/30 p-3 rounded border border-white/5 text-sm hover:border-primary/30 transition-colors">Write technical blog post on React perf</div>
+</div>
+</div>
+<div class="glass-panel hardware-texture p-6 rounded-xl border border-primary/20 shadow-[0_0_15px_rgba(0,242,255,0.05)] animate-fade-in-up delay-200">
+<h3 class="font-label-caps text-primary mb-4 flex items-center gap-2 border-b border-white/10 pb-2">
+<span class="material-symbols-outlined text-sm animate-spin" style="animation-duration: 3s;">sync</span> In Progress
+            </h3>
+<div class="space-y-3">
+<div class="bg-primary/5 border border-primary/20 p-3 rounded text-sm relative overflow-hidden group">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<span class="pl-2">Deploying Weather App v2.0</span>
+</div>
+<div class="bg-primary/5 border border-primary/20 p-3 rounded text-sm relative overflow-hidden group">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<span class="pl-2">Exploring distributed tracing (Jaeger)</span>
+</div>
+</div>
+</div>
+<div class="glass-panel hardware-texture p-6 rounded-xl border border-white/5 animate-fade-in-up delay-300">
+<h3 class="font-label-caps text-secondary mb-4 flex items-center gap-2 border-b border-white/10 pb-2">
+<span class="material-symbols-outlined text-sm">task_alt</span> Done
+            </h3>
+<div class="space-y-3 opacity-70">
+<div class="bg-surface-container/30 p-3 rounded border border-white/5 text-sm flex justify-between items-center line-through text-on-surface-variant">
+                    Setup initial portfolio
+                    <span class="material-symbols-outlined text-secondary text-sm">check</span>
+</div>
+<div class="bg-surface-container/30 p-3 rounded border border-white/5 text-sm flex justify-between items-center line-through text-on-surface-variant">
+                    Finish AWS certification
+                    <span class="material-symbols-outlined text-secondary text-sm">check</span>
+</div>
+</div>
+</div>
+</div>
+</section> -->
+      <section
+        class="space-y-8 reveal-on-scroll scroll-mt-32 mb-24 is-visible"
+        id="contact"
+      >
+        <div class="flex items-center gap-4 mb-8">
+          <span class="material-symbols-outlined text-3xl text-primary"
+            >contact_mail</span
+          >
+          <h2 class="font-headline-lg text-headline-lg">
+            System.Contact // Terminal
+          </h2>
+          <div class="flex-grow h-px bg-white/10 ml-4"></div>
+        </div>
+        <div
+          class="glass-panel hardware-texture shimmer-hover p-8 rounded-xl border border-primary/20 shadow-[0_0_15px_rgba(0,242,255,0.1)]"
+        >
+          <div
+            class="flex justify-between items-center mb-6 border-b border-white/10 pb-4"
+          >
+            <div class="flex items-center gap-2 text-on-surface-variant">
+              <div class="flex gap-2">
+                <div class="w-3 h-3 rounded-full bg-error"></div>
+                <div class="w-3 h-3 rounded-full bg-secondary"></div>
+                <div class="w-3 h-3 rounded-full bg-primary"></div>
+              </div>
+              <span class="ml-4 font-code-sm"
+                >ayush@dev-station: ~/contact $ ./send_signal.sh</span
+              >
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="flex items-center gap-2">
+                <span class="text-[10px] font-label-caps text-secondary"
+                  >SIGNAL_STRENGTH</span
+                >
+                <div class="flex gap-0.5">
+                  <div class="w-1 h-3 bg-secondary"></div>
+                  <div class="w-1 h-3 bg-secondary"></div>
+                  <div class="w-1 h-3 bg-secondary"></div>
+                  <div class="w-1 h-3 bg-secondary/30"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="space-y-6">
+              <div class="space-y-2 group">
+                <label
+                  class="flex items-center gap-2 font-label-caps text-[10px] text-primary/60 group-focus-within:text-primary transition-colors"
+                  ><span class="text-secondary">[</span> SUBJECT_HEADER
+                  <span class="text-secondary">]</span></label
+                >
+                <div class="relative flex items-center">
+                  <span class="absolute left-3 text-primary/40 font-code-sm"
+                    >$</span
+                  ><input
+                    class="subject w-full bg-surface-container/30 border border-white/10 rounded p-3 pl-8 font-code-sm text-sm text-white focus:border-primary focus:bg-surface-container/50 outline-none transition-all"
+                    placeholder="Enter subject..."
+                    type="text"
+                  />
+                </div>
+              </div>
+              <div class="space-y-2 group">
+                <label
+                  class="flex items-center gap-2 font-label-caps text-[10px] text-primary/60 group-focus-within:text-primary transition-colors"
+                  ><span class="text-secondary">[</span> SOURCE_EMAIL
+                  <span class="text-secondary">]</span></label
+                >
+                <div class="relative flex items-center">
+                  <span class="absolute left-3 text-primary/40 font-code-sm"
+                    >$</span
+                  ><input
+                    class="email w-full bg-surface-container/30 border border-white/10 rounded p-3 pl-8 font-code-sm text-sm text-white focus:border-primary focus:bg-surface-container/50 outline-none transition-all"
+                    placeholder="your@email.com"
+                    type="email"
+                  />
+                </div>
+              </div>
+              <div
+                class="flex items-center gap-3 p-4 bg-primary/5 border border-primary/10 rounded-lg mt-4"
+              >
+                <span
+                  class="material-symbols-outlined text-primary animate-pulse text-sm"
+                  >sensors</span
+                >
+                <div
+                  class="text-[10px] font-label-caps text-on-surface-variant"
+                >
+                  LINK_STATUS:
+                  <span class="text-secondary">ENCRYPTED_TUNNEL_ACTIVE</span>
+                </div>
+              </div>
+            </div>
+            <div class="space-y-2 flex flex-col group">
+              <label
+                class="flex items-center gap-2 font-label-caps text-[10px] text-primary/60 group-focus-within:text-primary transition-colors"
+                ><span class="message text-secondary">[</span> MESSAGE_PAYLOAD
+                <span class="text-secondary">]</span></label
+              ><textarea
+                class="flex-grow w-full bg-surface-container/30 border border-white/10 rounded p-4 font-code-sm text-sm text-white focus:border-primary focus:bg-surface-container/50 outline-none transition-all min-h-[180px] resize-none"
+                placeholder="Type your message here..."
+              ></textarea
+              ><button
+                class="sendButton mt-4 magnetic magnetic-primary w-full bg-primary-container text-on-primary-container py-4 rounded-lg font-code-sm text-sm font-bold uppercase tracking-widest flex items-center justify-center gap-2 hover:shadow-[0_0_20px_rgba(0,242,255,0.4)] transition-all"
+              >
+                <span class="material-symbols-outlined">send</span>
+                TRANSMIT_SIGNAL
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="w-full mt-auto bg-surface-container-lowest/60 backdrop-blur-md border-t border-white/5 transition-opacity duration-500 reveal-on-scroll is-visible"
+    >
+      <div
+        class="flex flex-col md:flex-row justify-between items-center px-margin-desktop py-gutter gap-4"
+      >
+        <div class="font-label-caps text-label-caps text-on-surface">
+          BUILD_COUNT: 1024_STABLE
+        </div>
+        <div class="flex gap-6 font-code-sm text-code-sm">
+          <a
+            class="text-outline hover:text-tertiary transition-colors duration-300"
+            href="https://github.com/ayushagrawalfzd4321-dot"
+            >GitHub</a
+          >
+          <a
+            class="text-outline hover:text-tertiary transition-colors duration-300"
+            href="https://www.linkedin.com/in/ayush-agrawal-4124373ab/"
+            >LinkedIn</a
+          >
+          <a
+            class="text-outline hover:text-tertiary transition-colors duration-300"
+            href="mailto:ayushagrawalfzd4321@gmail.com"
+            >Email</a
+          >
+        </div>
+        <div
+          class="text-tertiary font-bold font-code-sm text-code-sm hidden md:block"
+        >
+          SYS.OFFLINE -&gt; FALSE
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
