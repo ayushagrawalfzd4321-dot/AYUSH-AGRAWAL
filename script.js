@@ -120,9 +120,9 @@
         }, { threshold: 0.5 });
         
         terminalObserver.observe(document.getElementById('terminal'));
- document.getElementById("sendButton").addEventListener("click", () => {
-    const subject = document.getElementById("subject").value;
-    const email = document.getElementById("email").value;
+ document.getElementsByClassName("sendButton")[0].addEventListener("click", () => {
+    const subject = document.getElementsByClassName("subject")[0].value;
+    const email = document.getElementsByClassName("email")[0].value;
     const message = document.getElementById("message").value;
 
     const body = `From: ${email}\n\n${message}`;
